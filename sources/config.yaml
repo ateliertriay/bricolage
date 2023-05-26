@@ -12,6 +12,8 @@
         values:
         - name: 10pt
           value: 10
+        - name: 12pt
+          value: 12
         - name: 48pt
           value: 48
       - name: Width
@@ -19,7 +21,9 @@
         values:
         - name: Condensed
           value: 75
-      - name: Normal
+        - name: SemiCondensed
+          value: 87.5
+        - name: Normal
           value: 100
           flags: 2
       - name: Weight
