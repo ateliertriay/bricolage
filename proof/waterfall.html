@@ -1,0 +1,2785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>GFR - Waterfall</title>
+    
+    <style type="text/css">
+    
+        html{
+	  font-family: sans-serif;
+	}
+	.box-title{
+	  width: 100%;
+	  float: left;
+	  font-size: 8pt;
+	  font-weight: 700;
+	  border-top: 1px solid black;
+	  padding-top: 5px;
+	  margin-bottom: 10pt;
+	  display: block;
+	}
+	.box{
+	  margin-bottom: 20pt;
+	}
+	
+	#nav{
+	  position: fixed;
+	  right: 20px;
+	}
+	#font-toggle{
+	  display: block;
+	  font-weight: 700;
+	  cursor: pointer;
+	  -webkit-user-select: none; /* Safari */        
+	  -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* IE10+/Edge */
+	  user-select: none; /* Standard */
+	  text-align: center;
+	  color: white;
+	  background-color: black;
+	  width: 50px;
+	  display: block;
+	  padding: 10px;
+	}
+
+	  
+
+	  
+
+	  
+	    @font-face { src: url(fonts/BricolageGrotesque-SmallMedium.ttf); font-family: Bricolage-Grotesque-Small-Medium; font-weight: 500; font-stretch: 100%; font-style: normal; }
+	  
+	    @font-face { src: url(fonts/BricolageGrotesque-SmallCondensedSemiBold.ttf); font-family: Bricolage-Grotesque-Small-Condensed-SemiBold; font-weight: 600; font-stretch: 75%; font-style: normal; }
+	  
+	    @font-face { src: url(fonts/BricolageGrotesque-SmallUltraBold.ttf); font-family: Bricolage-Grotesque-Small-UltraBold-Regular; font-weight: 400; font-stretch: 100%; font-style: normal; }
+	  
+	    @font-face { src: url(fonts/BricolageGrotesque-BigCondensedBold.ttf); font-family: Bricolage-Grotesque-Big-Condensed-Bold; font-weight: 700; font-stretch: 75%; font-style: normal; }
+	  
+	    @font-face { src: url(fonts/BricolageGrotesque-BigLight.ttf); font-family: Bricolage-Grotesque-Big-Light; font-weight: 300; font-stretch: 100%; font-style: normal; }
+	  
+	    @font-face { src: url(fonts/BricolageGrotesque-BigCondensedMedium.ttf); font-family: Bricolage-Grotesque-Big-Condensed-Medium; font-weight: 500; font-stretch: 75%; font-style: normal; }
+	  
+	    @font-face { src: url(fonts/BricolageGrotesque-SmallCondensedLight.ttf); font-family: Bricolage-Grotesque-Small-Condensed-Light; font-weight: 300; font-stretch: 75%; font-style: normal; }
+	  
+	    @font-face { src: url(fonts/BricolageGrotesque-SmallCondensedRegular.ttf); font-family: Bricolage-Grotesque-Small-Condensed-Regular; font-weight: 400; font-stretch: 75%; font-style: normal; }
+	  
+	    @font-face { src: url(fonts/BricolageGrotesque-BigCondensedRegular.ttf); font-family: Bricolage-Grotesque-Big-Condensed-Regular; font-weight: 400; font-stretch: 75%; font-style: normal; }
+	  
+	    @font-face { src: url(fonts/BricolageGrotesque-SmallCondensedMedium.ttf); font-family: Bricolage-Grotesque-Small-Condensed-Medium; font-weight: 500; font-stretch: 75%; font-style: normal; }
+	  
+	    @font-face { src: url(fonts/BricolageGrotesque-BigCondensedUltraLight.ttf); font-family: Bricolage-Grotesque-Big-Condensed-UltraLight-Regular; font-weight: 400; font-stretch: 75%; font-style: normal; }
+	  
+	    @font-face { src: url(fonts/BricolageGrotesque-BigCondensedLight.ttf); font-family: Bricolage-Grotesque-Big-Condensed-Light; font-weight: 300; font-stretch: 75%; font-style: normal; }
+	  
+	    @font-face { src: url(fonts/BricolageGrotesque-SmallCondensedUltraBold.ttf); font-family: Bricolage-Grotesque-Small-Condensed-UltraBold-Regular; font-weight: 400; font-stretch: 75%; font-style: normal; }
+	  
+	    @font-face { src: url(fonts/BricolageGrotesque-SmallRegular.ttf); font-family: Bricolage-Grotesque-Small-Regular; font-weight: 400; font-stretch: 100%; font-style: normal; }
+	  
+	    @font-face { src: url(fonts/BricolageGrotesque-SmallBold.ttf); font-family: Bricolage-Grotesque-Small-Bold; font-weight: 700; font-stretch: 100%; font-style: normal; }
+	  
+	    @font-face { src: url(fonts/BricolageGrotesque-BigRegular.ttf); font-family: Bricolage-Grotesque-Big-Regular; font-weight: 400; font-stretch: 100%; font-style: normal; }
+	  
+	    @font-face { src: url(fonts/BricolageGrotesque-BigCondensedSemiBold.ttf); font-family: Bricolage-Grotesque-Big-Condensed-SemiBold; font-weight: 600; font-stretch: 75%; font-style: normal; }
+	  
+	    @font-face { src: url(fonts/BricolageGrotesque-SmallLight.ttf); font-family: Bricolage-Grotesque-Small-Light; font-weight: 300; font-stretch: 100%; font-style: normal; }
+	  
+	    @font-face { src: url(fonts/BricolageGrotesque-BigBold.ttf); font-family: Bricolage-Grotesque-Big-Bold; font-weight: 700; font-stretch: 100%; font-style: normal; }
+	  
+	    @font-face { src: url(fonts/BricolageGrotesque-BigUltraLight.ttf); font-family: Bricolage-Grotesque-Big-UltraLight-Regular; font-weight: 400; font-stretch: 100%; font-style: normal; }
+	  
+	    @font-face { src: url(fonts/BricolageGrotesque-BigCondensedUltraBold.ttf); font-family: Bricolage-Grotesque-Big-Condensed-UltraBold-Regular; font-weight: 400; font-stretch: 75%; font-style: normal; }
+	  
+	    @font-face { src: url(fonts/BricolageGrotesque-BigSemiBold.ttf); font-family: Bricolage-Grotesque-Big-SemiBold; font-weight: 600; font-stretch: 100%; font-style: normal; }
+	  
+	    @font-face { src: url(fonts/BricolageGrotesque-SmallCondensedUltraLight.ttf); font-family: Bricolage-Grotesque-Small-Condensed-UltraLight-Regular; font-weight: 400; font-stretch: 75%; font-style: normal; }
+	  
+	    @font-face { src: url(fonts/BricolageGrotesque-SmallCondensedBold.ttf); font-family: Bricolage-Grotesque-Small-Condensed-Bold; font-weight: 700; font-stretch: 75%; font-style: normal; }
+	  
+	    @font-face { src: url(fonts/BricolageGrotesque-SmallUltraLight.ttf); font-family: Bricolage-Grotesque-Small-UltraLight-Regular; font-weight: 400; font-stretch: 100%; font-style: normal; }
+	  
+	    @font-face { src: url(fonts/BricolageGrotesque-SmallSemiBold.ttf); font-family: Bricolage-Grotesque-Small-SemiBold; font-weight: 600; font-stretch: 100%; font-style: normal; }
+	  
+	    @font-face { src: url(fonts/BricolageGrotesque-BigMedium.ttf); font-family: Bricolage-Grotesque-Big-Medium; font-weight: 500; font-stretch: 100%; font-style: normal; }
+	  
+	    @font-face { src: url(fonts/BricolageGrotesque-BigUltraBold.ttf); font-family: Bricolage-Grotesque-Big-UltraBold-Regular; font-weight: 400; font-stretch: 100%; font-style: normal; }
+	  
+
+	  
+
+	  
+
+	  
+	    .Bricolage-Grotesque-Small-Medium { font-family: Bricolage-Grotesque-Small-Medium; font-weight: 500; font-style: normal; font-stretch: 100%; }
+	  
+	    .Bricolage-Grotesque-Small-Condensed-SemiBold { font-family: Bricolage-Grotesque-Small-Condensed-SemiBold; font-weight: 600; font-style: normal; font-stretch: 75%; }
+	  
+	    .Bricolage-Grotesque-Small-UltraBold-Regular { font-family: Bricolage-Grotesque-Small-UltraBold-Regular; font-weight: 400; font-style: normal; font-stretch: 100%; }
+	  
+	    .Bricolage-Grotesque-Big-Condensed-Bold { font-family: Bricolage-Grotesque-Big-Condensed-Bold; font-weight: 700; font-style: normal; font-stretch: 75%; }
+	  
+	    .Bricolage-Grotesque-Big-Light { font-family: Bricolage-Grotesque-Big-Light; font-weight: 300; font-style: normal; font-stretch: 100%; }
+	  
+	    .Bricolage-Grotesque-Big-Condensed-Medium { font-family: Bricolage-Grotesque-Big-Condensed-Medium; font-weight: 500; font-style: normal; font-stretch: 75%; }
+	  
+	    .Bricolage-Grotesque-Small-Condensed-Light { font-family: Bricolage-Grotesque-Small-Condensed-Light; font-weight: 300; font-style: normal; font-stretch: 75%; }
+	  
+	    .Bricolage-Grotesque-Small-Condensed-Regular { font-family: Bricolage-Grotesque-Small-Condensed-Regular; font-weight: 400; font-style: normal; font-stretch: 75%; }
+	  
+	    .Bricolage-Grotesque-Big-Condensed-Regular { font-family: Bricolage-Grotesque-Big-Condensed-Regular; font-weight: 400; font-style: normal; font-stretch: 75%; }
+	  
+	    .Bricolage-Grotesque-Small-Condensed-Medium { font-family: Bricolage-Grotesque-Small-Condensed-Medium; font-weight: 500; font-style: normal; font-stretch: 75%; }
+	  
+	    .Bricolage-Grotesque-Big-Condensed-UltraLight-Regular { font-family: Bricolage-Grotesque-Big-Condensed-UltraLight-Regular; font-weight: 400; font-style: normal; font-stretch: 75%; }
+	  
+	    .Bricolage-Grotesque-Big-Condensed-Light { font-family: Bricolage-Grotesque-Big-Condensed-Light; font-weight: 300; font-style: normal; font-stretch: 75%; }
+	  
+	    .Bricolage-Grotesque-Small-Condensed-UltraBold-Regular { font-family: Bricolage-Grotesque-Small-Condensed-UltraBold-Regular; font-weight: 400; font-style: normal; font-stretch: 75%; }
+	  
+	    .Bricolage-Grotesque-Small-Regular { font-family: Bricolage-Grotesque-Small-Regular; font-weight: 400; font-style: normal; font-stretch: 100%; }
+	  
+	    .Bricolage-Grotesque-Small-Bold { font-family: Bricolage-Grotesque-Small-Bold; font-weight: 700; font-style: normal; font-stretch: 100%; }
+	  
+	    .Bricolage-Grotesque-Big-Regular { font-family: Bricolage-Grotesque-Big-Regular; font-weight: 400; font-style: normal; font-stretch: 100%; }
+	  
+	    .Bricolage-Grotesque-Big-Condensed-SemiBold { font-family: Bricolage-Grotesque-Big-Condensed-SemiBold; font-weight: 600; font-style: normal; font-stretch: 75%; }
+	  
+	    .Bricolage-Grotesque-Small-Light { font-family: Bricolage-Grotesque-Small-Light; font-weight: 300; font-style: normal; font-stretch: 100%; }
+	  
+	    .Bricolage-Grotesque-Big-Bold { font-family: Bricolage-Grotesque-Big-Bold; font-weight: 700; font-style: normal; font-stretch: 100%; }
+	  
+	    .Bricolage-Grotesque-Big-UltraLight-Regular { font-family: Bricolage-Grotesque-Big-UltraLight-Regular; font-weight: 400; font-style: normal; font-stretch: 100%; }
+	  
+	    .Bricolage-Grotesque-Big-Condensed-UltraBold-Regular { font-family: Bricolage-Grotesque-Big-Condensed-UltraBold-Regular; font-weight: 400; font-style: normal; font-stretch: 75%; }
+	  
+	    .Bricolage-Grotesque-Big-SemiBold { font-family: Bricolage-Grotesque-Big-SemiBold; font-weight: 600; font-style: normal; font-stretch: 100%; }
+	  
+	    .Bricolage-Grotesque-Small-Condensed-UltraLight-Regular { font-family: Bricolage-Grotesque-Small-Condensed-UltraLight-Regular; font-weight: 400; font-style: normal; font-stretch: 75%; }
+	  
+	    .Bricolage-Grotesque-Small-Condensed-Bold { font-family: Bricolage-Grotesque-Small-Condensed-Bold; font-weight: 700; font-style: normal; font-stretch: 75%; }
+	  
+	    .Bricolage-Grotesque-Small-UltraLight-Regular { font-family: Bricolage-Grotesque-Small-UltraLight-Regular; font-weight: 400; font-style: normal; font-stretch: 100%; }
+	  
+	    .Bricolage-Grotesque-Small-SemiBold { font-family: Bricolage-Grotesque-Small-SemiBold; font-weight: 600; font-style: normal; font-stretch: 100%; }
+	  
+	    .Bricolage-Grotesque-Big-Medium { font-family: Bricolage-Grotesque-Big-Medium; font-weight: 500; font-style: normal; font-stretch: 100%; }
+	  
+	    .Bricolage-Grotesque-Big-UltraBold-Regular { font-family: Bricolage-Grotesque-Big-UltraBold-Regular; font-weight: 400; font-style: normal; font-stretch: 100%; }
+	  
+	
+    </style>
+</head>
+<body>
+    
+    <div id="content">
+	<h2>
+<b>Waterfall</b>
+</h2>
+	
+  
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Medium 7pt</div>
+	<span class="Bricolage-Grotesque-Small-Medium" style="font-size: 7pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Medium 10pt</div>
+	<span class="Bricolage-Grotesque-Small-Medium" style="font-size: 10pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Medium 11pt</div>
+	<span class="Bricolage-Grotesque-Small-Medium" style="font-size: 11pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Medium 12pt</div>
+	<span class="Bricolage-Grotesque-Small-Medium" style="font-size: 12pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Medium 14pt</div>
+	<span class="Bricolage-Grotesque-Small-Medium" style="font-size: 14pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Medium 16pt</div>
+	<span class="Bricolage-Grotesque-Small-Medium" style="font-size: 16pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Medium 18pt</div>
+	<span class="Bricolage-Grotesque-Small-Medium" style="font-size: 18pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Medium 21pt</div>
+	<span class="Bricolage-Grotesque-Small-Medium" style="font-size: 21pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Medium 27pt</div>
+	<span class="Bricolage-Grotesque-Small-Medium" style="font-size: 27pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Medium 32pt</div>
+	<span class="Bricolage-Grotesque-Small-Medium" style="font-size: 32pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+  
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-SemiBold 7pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-SemiBold" style="font-size: 7pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-SemiBold 10pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-SemiBold" style="font-size: 10pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-SemiBold 11pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-SemiBold" style="font-size: 11pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-SemiBold 12pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-SemiBold" style="font-size: 12pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-SemiBold 14pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-SemiBold" style="font-size: 14pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-SemiBold 16pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-SemiBold" style="font-size: 16pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-SemiBold 18pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-SemiBold" style="font-size: 18pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-SemiBold 21pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-SemiBold" style="font-size: 21pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-SemiBold 27pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-SemiBold" style="font-size: 27pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-SemiBold 32pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-SemiBold" style="font-size: 32pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+  
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-UltraBold-Regular 7pt</div>
+	<span class="Bricolage-Grotesque-Small-UltraBold-Regular" style="font-size: 7pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-UltraBold-Regular 10pt</div>
+	<span class="Bricolage-Grotesque-Small-UltraBold-Regular" style="font-size: 10pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-UltraBold-Regular 11pt</div>
+	<span class="Bricolage-Grotesque-Small-UltraBold-Regular" style="font-size: 11pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-UltraBold-Regular 12pt</div>
+	<span class="Bricolage-Grotesque-Small-UltraBold-Regular" style="font-size: 12pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-UltraBold-Regular 14pt</div>
+	<span class="Bricolage-Grotesque-Small-UltraBold-Regular" style="font-size: 14pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-UltraBold-Regular 16pt</div>
+	<span class="Bricolage-Grotesque-Small-UltraBold-Regular" style="font-size: 16pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-UltraBold-Regular 18pt</div>
+	<span class="Bricolage-Grotesque-Small-UltraBold-Regular" style="font-size: 18pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-UltraBold-Regular 21pt</div>
+	<span class="Bricolage-Grotesque-Small-UltraBold-Regular" style="font-size: 21pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-UltraBold-Regular 27pt</div>
+	<span class="Bricolage-Grotesque-Small-UltraBold-Regular" style="font-size: 27pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-UltraBold-Regular 32pt</div>
+	<span class="Bricolage-Grotesque-Small-UltraBold-Regular" style="font-size: 32pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+  
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-Bold 7pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-Bold" style="font-size: 7pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-Bold 10pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-Bold" style="font-size: 10pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-Bold 11pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-Bold" style="font-size: 11pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-Bold 12pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-Bold" style="font-size: 12pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-Bold 14pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-Bold" style="font-size: 14pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-Bold 16pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-Bold" style="font-size: 16pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-Bold 18pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-Bold" style="font-size: 18pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-Bold 21pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-Bold" style="font-size: 21pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-Bold 27pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-Bold" style="font-size: 27pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-Bold 32pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-Bold" style="font-size: 32pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+  
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Light 7pt</div>
+	<span class="Bricolage-Grotesque-Big-Light" style="font-size: 7pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Light 10pt</div>
+	<span class="Bricolage-Grotesque-Big-Light" style="font-size: 10pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Light 11pt</div>
+	<span class="Bricolage-Grotesque-Big-Light" style="font-size: 11pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Light 12pt</div>
+	<span class="Bricolage-Grotesque-Big-Light" style="font-size: 12pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Light 14pt</div>
+	<span class="Bricolage-Grotesque-Big-Light" style="font-size: 14pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Light 16pt</div>
+	<span class="Bricolage-Grotesque-Big-Light" style="font-size: 16pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Light 18pt</div>
+	<span class="Bricolage-Grotesque-Big-Light" style="font-size: 18pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Light 21pt</div>
+	<span class="Bricolage-Grotesque-Big-Light" style="font-size: 21pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Light 27pt</div>
+	<span class="Bricolage-Grotesque-Big-Light" style="font-size: 27pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Light 32pt</div>
+	<span class="Bricolage-Grotesque-Big-Light" style="font-size: 32pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+  
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-Medium 7pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-Medium" style="font-size: 7pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-Medium 10pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-Medium" style="font-size: 10pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-Medium 11pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-Medium" style="font-size: 11pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-Medium 12pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-Medium" style="font-size: 12pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-Medium 14pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-Medium" style="font-size: 14pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-Medium 16pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-Medium" style="font-size: 16pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-Medium 18pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-Medium" style="font-size: 18pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-Medium 21pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-Medium" style="font-size: 21pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-Medium 27pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-Medium" style="font-size: 27pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-Medium 32pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-Medium" style="font-size: 32pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+  
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-Light 7pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-Light" style="font-size: 7pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-Light 10pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-Light" style="font-size: 10pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-Light 11pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-Light" style="font-size: 11pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-Light 12pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-Light" style="font-size: 12pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-Light 14pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-Light" style="font-size: 14pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-Light 16pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-Light" style="font-size: 16pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-Light 18pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-Light" style="font-size: 18pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-Light 21pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-Light" style="font-size: 21pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-Light 27pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-Light" style="font-size: 27pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-Light 32pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-Light" style="font-size: 32pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+  
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-Regular 7pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-Regular" style="font-size: 7pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-Regular 10pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-Regular" style="font-size: 10pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-Regular 11pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-Regular" style="font-size: 11pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-Regular 12pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-Regular" style="font-size: 12pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-Regular 14pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-Regular" style="font-size: 14pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-Regular 16pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-Regular" style="font-size: 16pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-Regular 18pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-Regular" style="font-size: 18pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-Regular 21pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-Regular" style="font-size: 21pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-Regular 27pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-Regular" style="font-size: 27pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-Regular 32pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-Regular" style="font-size: 32pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+  
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-Regular 7pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-Regular" style="font-size: 7pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-Regular 10pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-Regular" style="font-size: 10pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-Regular 11pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-Regular" style="font-size: 11pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-Regular 12pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-Regular" style="font-size: 12pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-Regular 14pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-Regular" style="font-size: 14pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-Regular 16pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-Regular" style="font-size: 16pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-Regular 18pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-Regular" style="font-size: 18pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-Regular 21pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-Regular" style="font-size: 21pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-Regular 27pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-Regular" style="font-size: 27pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-Regular 32pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-Regular" style="font-size: 32pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+  
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-Medium 7pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-Medium" style="font-size: 7pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-Medium 10pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-Medium" style="font-size: 10pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-Medium 11pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-Medium" style="font-size: 11pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-Medium 12pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-Medium" style="font-size: 12pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-Medium 14pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-Medium" style="font-size: 14pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-Medium 16pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-Medium" style="font-size: 16pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-Medium 18pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-Medium" style="font-size: 18pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-Medium 21pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-Medium" style="font-size: 21pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-Medium 27pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-Medium" style="font-size: 27pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-Medium 32pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-Medium" style="font-size: 32pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+  
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-UltraLight-Regular 7pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-UltraLight-Regular" style="font-size: 7pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-UltraLight-Regular 10pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-UltraLight-Regular" style="font-size: 10pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-UltraLight-Regular 11pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-UltraLight-Regular" style="font-size: 11pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-UltraLight-Regular 12pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-UltraLight-Regular" style="font-size: 12pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-UltraLight-Regular 14pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-UltraLight-Regular" style="font-size: 14pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-UltraLight-Regular 16pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-UltraLight-Regular" style="font-size: 16pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-UltraLight-Regular 18pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-UltraLight-Regular" style="font-size: 18pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-UltraLight-Regular 21pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-UltraLight-Regular" style="font-size: 21pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-UltraLight-Regular 27pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-UltraLight-Regular" style="font-size: 27pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-UltraLight-Regular 32pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-UltraLight-Regular" style="font-size: 32pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+  
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-Light 7pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-Light" style="font-size: 7pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-Light 10pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-Light" style="font-size: 10pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-Light 11pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-Light" style="font-size: 11pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-Light 12pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-Light" style="font-size: 12pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-Light 14pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-Light" style="font-size: 14pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-Light 16pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-Light" style="font-size: 16pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-Light 18pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-Light" style="font-size: 18pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-Light 21pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-Light" style="font-size: 21pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-Light 27pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-Light" style="font-size: 27pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-Light 32pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-Light" style="font-size: 32pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+  
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-UltraBold-Regular 7pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-UltraBold-Regular" style="font-size: 7pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-UltraBold-Regular 10pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-UltraBold-Regular" style="font-size: 10pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-UltraBold-Regular 11pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-UltraBold-Regular" style="font-size: 11pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-UltraBold-Regular 12pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-UltraBold-Regular" style="font-size: 12pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-UltraBold-Regular 14pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-UltraBold-Regular" style="font-size: 14pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-UltraBold-Regular 16pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-UltraBold-Regular" style="font-size: 16pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-UltraBold-Regular 18pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-UltraBold-Regular" style="font-size: 18pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-UltraBold-Regular 21pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-UltraBold-Regular" style="font-size: 21pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-UltraBold-Regular 27pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-UltraBold-Regular" style="font-size: 27pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-UltraBold-Regular 32pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-UltraBold-Regular" style="font-size: 32pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+  
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Regular 7pt</div>
+	<span class="Bricolage-Grotesque-Small-Regular" style="font-size: 7pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Regular 10pt</div>
+	<span class="Bricolage-Grotesque-Small-Regular" style="font-size: 10pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Regular 11pt</div>
+	<span class="Bricolage-Grotesque-Small-Regular" style="font-size: 11pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Regular 12pt</div>
+	<span class="Bricolage-Grotesque-Small-Regular" style="font-size: 12pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Regular 14pt</div>
+	<span class="Bricolage-Grotesque-Small-Regular" style="font-size: 14pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Regular 16pt</div>
+	<span class="Bricolage-Grotesque-Small-Regular" style="font-size: 16pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Regular 18pt</div>
+	<span class="Bricolage-Grotesque-Small-Regular" style="font-size: 18pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Regular 21pt</div>
+	<span class="Bricolage-Grotesque-Small-Regular" style="font-size: 21pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Regular 27pt</div>
+	<span class="Bricolage-Grotesque-Small-Regular" style="font-size: 27pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Regular 32pt</div>
+	<span class="Bricolage-Grotesque-Small-Regular" style="font-size: 32pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+  
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Bold 7pt</div>
+	<span class="Bricolage-Grotesque-Small-Bold" style="font-size: 7pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Bold 10pt</div>
+	<span class="Bricolage-Grotesque-Small-Bold" style="font-size: 10pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Bold 11pt</div>
+	<span class="Bricolage-Grotesque-Small-Bold" style="font-size: 11pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Bold 12pt</div>
+	<span class="Bricolage-Grotesque-Small-Bold" style="font-size: 12pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Bold 14pt</div>
+	<span class="Bricolage-Grotesque-Small-Bold" style="font-size: 14pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Bold 16pt</div>
+	<span class="Bricolage-Grotesque-Small-Bold" style="font-size: 16pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Bold 18pt</div>
+	<span class="Bricolage-Grotesque-Small-Bold" style="font-size: 18pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Bold 21pt</div>
+	<span class="Bricolage-Grotesque-Small-Bold" style="font-size: 21pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Bold 27pt</div>
+	<span class="Bricolage-Grotesque-Small-Bold" style="font-size: 27pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Bold 32pt</div>
+	<span class="Bricolage-Grotesque-Small-Bold" style="font-size: 32pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+  
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Regular 7pt</div>
+	<span class="Bricolage-Grotesque-Big-Regular" style="font-size: 7pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Regular 10pt</div>
+	<span class="Bricolage-Grotesque-Big-Regular" style="font-size: 10pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Regular 11pt</div>
+	<span class="Bricolage-Grotesque-Big-Regular" style="font-size: 11pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Regular 12pt</div>
+	<span class="Bricolage-Grotesque-Big-Regular" style="font-size: 12pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Regular 14pt</div>
+	<span class="Bricolage-Grotesque-Big-Regular" style="font-size: 14pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Regular 16pt</div>
+	<span class="Bricolage-Grotesque-Big-Regular" style="font-size: 16pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Regular 18pt</div>
+	<span class="Bricolage-Grotesque-Big-Regular" style="font-size: 18pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Regular 21pt</div>
+	<span class="Bricolage-Grotesque-Big-Regular" style="font-size: 21pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Regular 27pt</div>
+	<span class="Bricolage-Grotesque-Big-Regular" style="font-size: 27pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Regular 32pt</div>
+	<span class="Bricolage-Grotesque-Big-Regular" style="font-size: 32pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+  
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-SemiBold 7pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-SemiBold" style="font-size: 7pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-SemiBold 10pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-SemiBold" style="font-size: 10pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-SemiBold 11pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-SemiBold" style="font-size: 11pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-SemiBold 12pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-SemiBold" style="font-size: 12pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-SemiBold 14pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-SemiBold" style="font-size: 14pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-SemiBold 16pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-SemiBold" style="font-size: 16pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-SemiBold 18pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-SemiBold" style="font-size: 18pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-SemiBold 21pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-SemiBold" style="font-size: 21pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-SemiBold 27pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-SemiBold" style="font-size: 27pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-SemiBold 32pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-SemiBold" style="font-size: 32pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+  
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Light 7pt</div>
+	<span class="Bricolage-Grotesque-Small-Light" style="font-size: 7pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Light 10pt</div>
+	<span class="Bricolage-Grotesque-Small-Light" style="font-size: 10pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Light 11pt</div>
+	<span class="Bricolage-Grotesque-Small-Light" style="font-size: 11pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Light 12pt</div>
+	<span class="Bricolage-Grotesque-Small-Light" style="font-size: 12pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Light 14pt</div>
+	<span class="Bricolage-Grotesque-Small-Light" style="font-size: 14pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Light 16pt</div>
+	<span class="Bricolage-Grotesque-Small-Light" style="font-size: 16pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Light 18pt</div>
+	<span class="Bricolage-Grotesque-Small-Light" style="font-size: 18pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Light 21pt</div>
+	<span class="Bricolage-Grotesque-Small-Light" style="font-size: 21pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Light 27pt</div>
+	<span class="Bricolage-Grotesque-Small-Light" style="font-size: 27pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Light 32pt</div>
+	<span class="Bricolage-Grotesque-Small-Light" style="font-size: 32pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+  
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Bold 7pt</div>
+	<span class="Bricolage-Grotesque-Big-Bold" style="font-size: 7pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Bold 10pt</div>
+	<span class="Bricolage-Grotesque-Big-Bold" style="font-size: 10pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Bold 11pt</div>
+	<span class="Bricolage-Grotesque-Big-Bold" style="font-size: 11pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Bold 12pt</div>
+	<span class="Bricolage-Grotesque-Big-Bold" style="font-size: 12pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Bold 14pt</div>
+	<span class="Bricolage-Grotesque-Big-Bold" style="font-size: 14pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Bold 16pt</div>
+	<span class="Bricolage-Grotesque-Big-Bold" style="font-size: 16pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Bold 18pt</div>
+	<span class="Bricolage-Grotesque-Big-Bold" style="font-size: 18pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Bold 21pt</div>
+	<span class="Bricolage-Grotesque-Big-Bold" style="font-size: 21pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Bold 27pt</div>
+	<span class="Bricolage-Grotesque-Big-Bold" style="font-size: 27pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Bold 32pt</div>
+	<span class="Bricolage-Grotesque-Big-Bold" style="font-size: 32pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+  
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-UltraLight-Regular 7pt</div>
+	<span class="Bricolage-Grotesque-Big-UltraLight-Regular" style="font-size: 7pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-UltraLight-Regular 10pt</div>
+	<span class="Bricolage-Grotesque-Big-UltraLight-Regular" style="font-size: 10pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-UltraLight-Regular 11pt</div>
+	<span class="Bricolage-Grotesque-Big-UltraLight-Regular" style="font-size: 11pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-UltraLight-Regular 12pt</div>
+	<span class="Bricolage-Grotesque-Big-UltraLight-Regular" style="font-size: 12pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-UltraLight-Regular 14pt</div>
+	<span class="Bricolage-Grotesque-Big-UltraLight-Regular" style="font-size: 14pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-UltraLight-Regular 16pt</div>
+	<span class="Bricolage-Grotesque-Big-UltraLight-Regular" style="font-size: 16pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-UltraLight-Regular 18pt</div>
+	<span class="Bricolage-Grotesque-Big-UltraLight-Regular" style="font-size: 18pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-UltraLight-Regular 21pt</div>
+	<span class="Bricolage-Grotesque-Big-UltraLight-Regular" style="font-size: 21pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-UltraLight-Regular 27pt</div>
+	<span class="Bricolage-Grotesque-Big-UltraLight-Regular" style="font-size: 27pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-UltraLight-Regular 32pt</div>
+	<span class="Bricolage-Grotesque-Big-UltraLight-Regular" style="font-size: 32pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+  
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-UltraBold-Regular 7pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-UltraBold-Regular" style="font-size: 7pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-UltraBold-Regular 10pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-UltraBold-Regular" style="font-size: 10pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-UltraBold-Regular 11pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-UltraBold-Regular" style="font-size: 11pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-UltraBold-Regular 12pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-UltraBold-Regular" style="font-size: 12pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-UltraBold-Regular 14pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-UltraBold-Regular" style="font-size: 14pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-UltraBold-Regular 16pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-UltraBold-Regular" style="font-size: 16pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-UltraBold-Regular 18pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-UltraBold-Regular" style="font-size: 18pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-UltraBold-Regular 21pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-UltraBold-Regular" style="font-size: 21pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-UltraBold-Regular 27pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-UltraBold-Regular" style="font-size: 27pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Condensed-UltraBold-Regular 32pt</div>
+	<span class="Bricolage-Grotesque-Big-Condensed-UltraBold-Regular" style="font-size: 32pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+  
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-SemiBold 7pt</div>
+	<span class="Bricolage-Grotesque-Big-SemiBold" style="font-size: 7pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-SemiBold 10pt</div>
+	<span class="Bricolage-Grotesque-Big-SemiBold" style="font-size: 10pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-SemiBold 11pt</div>
+	<span class="Bricolage-Grotesque-Big-SemiBold" style="font-size: 11pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-SemiBold 12pt</div>
+	<span class="Bricolage-Grotesque-Big-SemiBold" style="font-size: 12pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-SemiBold 14pt</div>
+	<span class="Bricolage-Grotesque-Big-SemiBold" style="font-size: 14pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-SemiBold 16pt</div>
+	<span class="Bricolage-Grotesque-Big-SemiBold" style="font-size: 16pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-SemiBold 18pt</div>
+	<span class="Bricolage-Grotesque-Big-SemiBold" style="font-size: 18pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-SemiBold 21pt</div>
+	<span class="Bricolage-Grotesque-Big-SemiBold" style="font-size: 21pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-SemiBold 27pt</div>
+	<span class="Bricolage-Grotesque-Big-SemiBold" style="font-size: 27pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-SemiBold 32pt</div>
+	<span class="Bricolage-Grotesque-Big-SemiBold" style="font-size: 32pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+  
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-UltraLight-Regular 7pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-UltraLight-Regular" style="font-size: 7pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-UltraLight-Regular 10pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-UltraLight-Regular" style="font-size: 10pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-UltraLight-Regular 11pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-UltraLight-Regular" style="font-size: 11pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-UltraLight-Regular 12pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-UltraLight-Regular" style="font-size: 12pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-UltraLight-Regular 14pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-UltraLight-Regular" style="font-size: 14pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-UltraLight-Regular 16pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-UltraLight-Regular" style="font-size: 16pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-UltraLight-Regular 18pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-UltraLight-Regular" style="font-size: 18pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-UltraLight-Regular 21pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-UltraLight-Regular" style="font-size: 21pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-UltraLight-Regular 27pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-UltraLight-Regular" style="font-size: 27pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-UltraLight-Regular 32pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-UltraLight-Regular" style="font-size: 32pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+  
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-Bold 7pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-Bold" style="font-size: 7pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-Bold 10pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-Bold" style="font-size: 10pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-Bold 11pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-Bold" style="font-size: 11pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-Bold 12pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-Bold" style="font-size: 12pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-Bold 14pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-Bold" style="font-size: 14pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-Bold 16pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-Bold" style="font-size: 16pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-Bold 18pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-Bold" style="font-size: 18pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-Bold 21pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-Bold" style="font-size: 21pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-Bold 27pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-Bold" style="font-size: 27pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-Condensed-Bold 32pt</div>
+	<span class="Bricolage-Grotesque-Small-Condensed-Bold" style="font-size: 32pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+  
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-UltraLight-Regular 7pt</div>
+	<span class="Bricolage-Grotesque-Small-UltraLight-Regular" style="font-size: 7pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-UltraLight-Regular 10pt</div>
+	<span class="Bricolage-Grotesque-Small-UltraLight-Regular" style="font-size: 10pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-UltraLight-Regular 11pt</div>
+	<span class="Bricolage-Grotesque-Small-UltraLight-Regular" style="font-size: 11pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-UltraLight-Regular 12pt</div>
+	<span class="Bricolage-Grotesque-Small-UltraLight-Regular" style="font-size: 12pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-UltraLight-Regular 14pt</div>
+	<span class="Bricolage-Grotesque-Small-UltraLight-Regular" style="font-size: 14pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-UltraLight-Regular 16pt</div>
+	<span class="Bricolage-Grotesque-Small-UltraLight-Regular" style="font-size: 16pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-UltraLight-Regular 18pt</div>
+	<span class="Bricolage-Grotesque-Small-UltraLight-Regular" style="font-size: 18pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-UltraLight-Regular 21pt</div>
+	<span class="Bricolage-Grotesque-Small-UltraLight-Regular" style="font-size: 21pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-UltraLight-Regular 27pt</div>
+	<span class="Bricolage-Grotesque-Small-UltraLight-Regular" style="font-size: 27pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-UltraLight-Regular 32pt</div>
+	<span class="Bricolage-Grotesque-Small-UltraLight-Regular" style="font-size: 32pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+  
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-SemiBold 7pt</div>
+	<span class="Bricolage-Grotesque-Small-SemiBold" style="font-size: 7pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-SemiBold 10pt</div>
+	<span class="Bricolage-Grotesque-Small-SemiBold" style="font-size: 10pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-SemiBold 11pt</div>
+	<span class="Bricolage-Grotesque-Small-SemiBold" style="font-size: 11pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-SemiBold 12pt</div>
+	<span class="Bricolage-Grotesque-Small-SemiBold" style="font-size: 12pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-SemiBold 14pt</div>
+	<span class="Bricolage-Grotesque-Small-SemiBold" style="font-size: 14pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-SemiBold 16pt</div>
+	<span class="Bricolage-Grotesque-Small-SemiBold" style="font-size: 16pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-SemiBold 18pt</div>
+	<span class="Bricolage-Grotesque-Small-SemiBold" style="font-size: 18pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-SemiBold 21pt</div>
+	<span class="Bricolage-Grotesque-Small-SemiBold" style="font-size: 21pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-SemiBold 27pt</div>
+	<span class="Bricolage-Grotesque-Small-SemiBold" style="font-size: 27pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Small-SemiBold 32pt</div>
+	<span class="Bricolage-Grotesque-Small-SemiBold" style="font-size: 32pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+  
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Medium 7pt</div>
+	<span class="Bricolage-Grotesque-Big-Medium" style="font-size: 7pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Medium 10pt</div>
+	<span class="Bricolage-Grotesque-Big-Medium" style="font-size: 10pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Medium 11pt</div>
+	<span class="Bricolage-Grotesque-Big-Medium" style="font-size: 11pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Medium 12pt</div>
+	<span class="Bricolage-Grotesque-Big-Medium" style="font-size: 12pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Medium 14pt</div>
+	<span class="Bricolage-Grotesque-Big-Medium" style="font-size: 14pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Medium 16pt</div>
+	<span class="Bricolage-Grotesque-Big-Medium" style="font-size: 16pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Medium 18pt</div>
+	<span class="Bricolage-Grotesque-Big-Medium" style="font-size: 18pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Medium 21pt</div>
+	<span class="Bricolage-Grotesque-Big-Medium" style="font-size: 21pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Medium 27pt</div>
+	<span class="Bricolage-Grotesque-Big-Medium" style="font-size: 27pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-Medium 32pt</div>
+	<span class="Bricolage-Grotesque-Big-Medium" style="font-size: 32pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+  
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-UltraBold-Regular 7pt</div>
+	<span class="Bricolage-Grotesque-Big-UltraBold-Regular" style="font-size: 7pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-UltraBold-Regular 10pt</div>
+	<span class="Bricolage-Grotesque-Big-UltraBold-Regular" style="font-size: 10pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-UltraBold-Regular 11pt</div>
+	<span class="Bricolage-Grotesque-Big-UltraBold-Regular" style="font-size: 11pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-UltraBold-Regular 12pt</div>
+	<span class="Bricolage-Grotesque-Big-UltraBold-Regular" style="font-size: 12pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-UltraBold-Regular 14pt</div>
+	<span class="Bricolage-Grotesque-Big-UltraBold-Regular" style="font-size: 14pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-UltraBold-Regular 16pt</div>
+	<span class="Bricolage-Grotesque-Big-UltraBold-Regular" style="font-size: 16pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-UltraBold-Regular 18pt</div>
+	<span class="Bricolage-Grotesque-Big-UltraBold-Regular" style="font-size: 18pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-UltraBold-Regular 21pt</div>
+	<span class="Bricolage-Grotesque-Big-UltraBold-Regular" style="font-size: 21pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-UltraBold-Regular 27pt</div>
+	<span class="Bricolage-Grotesque-Big-UltraBold-Regular" style="font-size: 27pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+      <div class="box">
+	<div class="box-title">Bricolage-Grotesque-Big-UltraBold-Regular 32pt</div>
+	<span class="Bricolage-Grotesque-Big-UltraBold-Regular" style="font-size: 32pt">
+            QUICK WAFTING ZEPHYRS VEX BOLD JIM.<br>
+            quick wafting zephyrs vex bold jim.<br>
+            $14.95<br>
+          </span>
+       </div>
+    
+  
+
+    </div>
+</body>
+	<script>
+
+	POSITION = "after"
+	fontToggle = document.getElementById("font-toggle")
+	function switchFonts() {
+	  items = document.getElementsByClassName("box")
+	  
+	  if (POSITION === "before") {
+	  POSITION = "after"
+	  for (item of items) {
+	    item.firstElementChild.textContent = item.firstElementChild.textContent.replace("before", "after")
+            item.lastElementChild.className = item.lastElementChild.className.replace("before", "after")
+	    fontToggle.textContent = "After"
+	  }
+	  } else {
+	  POSITION = "before"
+	  for (item of items) {
+	    item.firstElementChild.textContent = item.firstElementChild.textContent.replace("after", "before")
+            item.lastElementChild.className = item.lastElementChild.className.replace("after", "before")
+	    fontToggle.textContent = "Before"
+	  }
+	}
+	}
+	fontToggle.addEventListener("click", switchFonts);
+	</script>
+</html>
