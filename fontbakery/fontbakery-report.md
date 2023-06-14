@@ -29,17 +29,17 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 The following glyphs do not have the recommended number of contours:
 
-	- Glyph name: at	Contours detected: 3	Expected: 2
+	- Glyph name: at	Contours detected: 4	Expected: 2
 	- Glyph name: brokenbar	Contours detected: 1	Expected: 2
-	- Glyph name: copyright	Contours detected: 2	Expected: 3
 	- Glyph name: aogonek	Contours detected: 3	Expected: 2
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
 	- Glyph name: Uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uni1EE8	Contours detected: 3	Expected: 2
 	- Glyph name: uni1EE9	Contours detected: 3	Expected: 2
-	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2 
-	- And 24 more.
+	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2
+	- Glyph name: uni1EED	Contours detected: 3	Expected: 2 
+	- And 22 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: contour-count]
@@ -58,9 +58,9 @@ Use -F or --full-lists to disable shortening of long lists.
 	* ampersand (U+0026): X=608.0,Y=1.0 (should be at baseline 0?)
 	* four (U+0034): X=319.0,Y=661.0 (should be at cap-height 660?)
 	* four (U+0034): X=447.0,Y=661.0 (should be at cap-height 660?)
+	* at (U+0040): X=163.0,Y=0.5 (should be at baseline 0?)
 	* asciicircum (U+005E): X=211.0,Y=661.0 (should be at cap-height 660?)
-	* asciicircum (U+005E): X=307.0,Y=661.0 (should be at cap-height 660?)
-	* g (U+0067): X=281.0,Y=515.0 (should be at x-height 514?) and 65 more.
+	* asciicircum (U+005E): X=307.0,Y=661.0 (should be at cap-height 660?) and 66 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do any segments have colinear vectors? (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_colinear_vectors">com.google.fonts/check/outline_colinear_vectors</a>)</summary><div>
@@ -122,17 +122,17 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 The following glyphs do not have the recommended number of contours:
 
-	- Glyph name: at	Contours detected: 3	Expected: 2
+	- Glyph name: at	Contours detected: 4	Expected: 2
 	- Glyph name: brokenbar	Contours detected: 1	Expected: 2
-	- Glyph name: copyright	Contours detected: 2	Expected: 3
 	- Glyph name: aogonek	Contours detected: 3	Expected: 2
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
 	- Glyph name: Uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uni1EE8	Contours detected: 3	Expected: 2
 	- Glyph name: uni1EE9	Contours detected: 3	Expected: 2
-	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2 
-	- And 24 more.
+	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2
+	- Glyph name: uni1EED	Contours detected: 3	Expected: 2 
+	- And 22 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: contour-count]
@@ -221,17 +221,17 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 The following glyphs do not have the recommended number of contours:
 
-	- Glyph name: at	Contours detected: 3	Expected: 2
+	- Glyph name: at	Contours detected: 4	Expected: 2
 	- Glyph name: brokenbar	Contours detected: 1	Expected: 2
-	- Glyph name: copyright	Contours detected: 2	Expected: 3
 	- Glyph name: aogonek	Contours detected: 3	Expected: 2
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
 	- Glyph name: Uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uni1EE8	Contours detected: 3	Expected: 2
 	- Glyph name: uni1EE9	Contours detected: 3	Expected: 2
-	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2 
-	- And 24 more.
+	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2
+	- Glyph name: uni1EED	Contours detected: 3	Expected: 2 
+	- And 22 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: contour-count]
@@ -314,17 +314,17 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 The following glyphs do not have the recommended number of contours:
 
-	- Glyph name: at	Contours detected: 3	Expected: 2
+	- Glyph name: at	Contours detected: 4	Expected: 2
 	- Glyph name: brokenbar	Contours detected: 1	Expected: 2
-	- Glyph name: copyright	Contours detected: 2	Expected: 3
 	- Glyph name: aogonek	Contours detected: 3	Expected: 2
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
 	- Glyph name: Uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uni1EE8	Contours detected: 3	Expected: 2
 	- Glyph name: uni1EE9	Contours detected: 3	Expected: 2
-	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2 
-	- And 24 more.
+	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2
+	- Glyph name: uni1EED	Contours detected: 3	Expected: 2 
+	- And 22 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: contour-count]
@@ -345,7 +345,7 @@ Use -F or --full-lists to disable shortening of long lists.
 	* four (U+0034): X=481.0,Y=661.0 (should be at cap-height 660?)
 	* seven (U+0037): X=26.0,Y=661.0 (should be at cap-height 660?)
 	* seven (U+0037): X=468.0,Y=661.0 (should be at cap-height 660?)
-	* question (U+003F): X=100.0,Y=659.0 (should be at cap-height 660?) and 43 more.
+	* question (U+003F): X=100.0,Y=659.0 (should be at cap-height 660?) and 45 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do any segments have colinear vectors? (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_colinear_vectors">com.google.fonts/check/outline_colinear_vectors</a>)</summary><div>
@@ -397,17 +397,17 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 The following glyphs do not have the recommended number of contours:
 
-	- Glyph name: at	Contours detected: 3	Expected: 2
+	- Glyph name: at	Contours detected: 4	Expected: 2
 	- Glyph name: brokenbar	Contours detected: 1	Expected: 2
-	- Glyph name: copyright	Contours detected: 2	Expected: 3
 	- Glyph name: aogonek	Contours detected: 3	Expected: 2
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
 	- Glyph name: Uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uni1EE8	Contours detected: 3	Expected: 2
 	- Glyph name: uni1EE9	Contours detected: 3	Expected: 2
-	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2 
-	- And 24 more.
+	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2
+	- Glyph name: uni1EED	Contours detected: 3	Expected: 2 
+	- And 22 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: contour-count]
@@ -426,9 +426,9 @@ Use -F or --full-lists to disable shortening of long lists.
 	* four (U+0034): X=164.0,Y=661.0 (should be at cap-height 660?)
 	* four (U+0034): X=410.0,Y=661.0 (should be at cap-height 660?)
 	* question (U+003F): X=74.5,Y=661.0 (should be at cap-height 660?)
-	* Q (U+0051): X=50.0,Y=-2.0 (should be at baseline 0?)
-	* Q (U+0051): X=153.0,Y=-1.0 (should be at baseline 0?)
-	* g (U+0067): X=131.0,Y=-1.0 (should be at baseline 0?) and 86 more.
+	* at (U+0040): X=274.0,Y=659.5 (should be at cap-height 660?)
+	* at (U+0040): X=565.5,Y=659.5 (should be at cap-height 660?)
+	* Q (U+0051): X=50.0,Y=-2.0 (should be at baseline 0?) and 90 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do outlines contain any jaggy segments? (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_jaggy_segments">com.google.fonts/check/outline_jaggy_segments</a>)</summary><div>
@@ -469,17 +469,17 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 The following glyphs do not have the recommended number of contours:
 
-	- Glyph name: at	Contours detected: 3	Expected: 2
+	- Glyph name: at	Contours detected: 4	Expected: 2
 	- Glyph name: brokenbar	Contours detected: 1	Expected: 2
-	- Glyph name: copyright	Contours detected: 2	Expected: 3
 	- Glyph name: aogonek	Contours detected: 3	Expected: 2
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
 	- Glyph name: Uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uni1EE8	Contours detected: 3	Expected: 2
 	- Glyph name: uni1EE9	Contours detected: 3	Expected: 2
-	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2 
-	- And 24 more.
+	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2
+	- Glyph name: uni1EED	Contours detected: 3	Expected: 2 
+	- And 22 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: contour-count]
@@ -547,17 +547,17 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 The following glyphs do not have the recommended number of contours:
 
-	- Glyph name: at	Contours detected: 3	Expected: 2
+	- Glyph name: at	Contours detected: 4	Expected: 2
 	- Glyph name: brokenbar	Contours detected: 1	Expected: 2
-	- Glyph name: copyright	Contours detected: 2	Expected: 3
 	- Glyph name: aogonek	Contours detected: 3	Expected: 2
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
 	- Glyph name: Uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uni1EE8	Contours detected: 3	Expected: 2
 	- Glyph name: uni1EE9	Contours detected: 3	Expected: 2
-	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2 
-	- And 24 more.
+	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2
+	- Glyph name: uni1EED	Contours detected: 3	Expected: 2 
+	- And 22 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: contour-count]
@@ -617,17 +617,17 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 The following glyphs do not have the recommended number of contours:
 
-	- Glyph name: at	Contours detected: 3	Expected: 2
+	- Glyph name: at	Contours detected: 4	Expected: 2
 	- Glyph name: brokenbar	Contours detected: 1	Expected: 2
-	- Glyph name: copyright	Contours detected: 2	Expected: 3
 	- Glyph name: aogonek	Contours detected: 3	Expected: 2
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
 	- Glyph name: Uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uni1EE8	Contours detected: 3	Expected: 2
 	- Glyph name: uni1EE9	Contours detected: 3	Expected: 2
-	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2 
-	- And 24 more.
+	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2
+	- Glyph name: uni1EED	Contours detected: 3	Expected: 2 
+	- And 22 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: contour-count]
@@ -680,17 +680,17 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 The following glyphs do not have the recommended number of contours:
 
-	- Glyph name: at	Contours detected: 3	Expected: 2
+	- Glyph name: at	Contours detected: 4	Expected: 2
 	- Glyph name: brokenbar	Contours detected: 1	Expected: 2
-	- Glyph name: copyright	Contours detected: 2	Expected: 3
 	- Glyph name: aogonek	Contours detected: 3	Expected: 2
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
 	- Glyph name: Uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uni1EE8	Contours detected: 3	Expected: 2
 	- Glyph name: uni1EE9	Contours detected: 3	Expected: 2
-	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2 
-	- And 24 more.
+	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2
+	- Glyph name: uni1EED	Contours detected: 3	Expected: 2 
+	- And 22 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: contour-count]
@@ -711,7 +711,7 @@ Use -F or --full-lists to disable shortening of long lists.
 	* g (U+0067): X=136.0,Y=-0.5 (should be at baseline 0?)
 	* r (U+0072): X=278.0,Y=530.0 (should be at x-height 528?)
 	* r (U+0072): X=285.0,Y=530.0 (should be at x-height 528?)
-	* r (U+0072): X=292.0,Y=529.0 (should be at x-height 528?) and 41 more.
+	* r (U+0072): X=292.0,Y=529.0 (should be at x-height 528?) and 38 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do outlines contain any jaggy segments? (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_jaggy_segments">com.google.fonts/check/outline_jaggy_segments</a>)</summary><div>
@@ -749,17 +749,17 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 The following glyphs do not have the recommended number of contours:
 
-	- Glyph name: at	Contours detected: 3	Expected: 2
+	- Glyph name: at	Contours detected: 4	Expected: 2
 	- Glyph name: brokenbar	Contours detected: 1	Expected: 2
-	- Glyph name: copyright	Contours detected: 2	Expected: 3
 	- Glyph name: aogonek	Contours detected: 3	Expected: 2
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
 	- Glyph name: Uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uni1EE8	Contours detected: 3	Expected: 2
 	- Glyph name: uni1EE9	Contours detected: 3	Expected: 2
-	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2 
-	- And 24 more.
+	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2
+	- Glyph name: uni1EED	Contours detected: 3	Expected: 2 
+	- And 22 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: contour-count]
@@ -855,17 +855,17 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 The following glyphs do not have the recommended number of contours:
 
-	- Glyph name: at	Contours detected: 3	Expected: 2
+	- Glyph name: at	Contours detected: 4	Expected: 2
 	- Glyph name: brokenbar	Contours detected: 1	Expected: 2
-	- Glyph name: copyright	Contours detected: 2	Expected: 3
 	- Glyph name: aogonek	Contours detected: 3	Expected: 2
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
 	- Glyph name: Uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uni1EE8	Contours detected: 3	Expected: 2
 	- Glyph name: uni1EE9	Contours detected: 3	Expected: 2
-	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2 
-	- And 24 more.
+	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2
+	- Glyph name: uni1EED	Contours detected: 3	Expected: 2 
+	- And 22 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: contour-count]
@@ -915,17 +915,17 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 The following glyphs do not have the recommended number of contours:
 
-	- Glyph name: at	Contours detected: 3	Expected: 2
+	- Glyph name: at	Contours detected: 4	Expected: 2
 	- Glyph name: brokenbar	Contours detected: 1	Expected: 2
-	- Glyph name: copyright	Contours detected: 2	Expected: 3
 	- Glyph name: aogonek	Contours detected: 3	Expected: 2
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
 	- Glyph name: Uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uni1EE8	Contours detected: 3	Expected: 2
 	- Glyph name: uni1EE9	Contours detected: 3	Expected: 2
-	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2 
-	- And 24 more.
+	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2
+	- Glyph name: uni1EED	Contours detected: 3	Expected: 2 
+	- And 22 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: contour-count]
@@ -993,17 +993,17 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 The following glyphs do not have the recommended number of contours:
 
-	- Glyph name: at	Contours detected: 3	Expected: 2
+	- Glyph name: at	Contours detected: 4	Expected: 2
 	- Glyph name: brokenbar	Contours detected: 1	Expected: 2
-	- Glyph name: copyright	Contours detected: 2	Expected: 3
 	- Glyph name: aogonek	Contours detected: 3	Expected: 2
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
 	- Glyph name: Uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uni1EE8	Contours detected: 3	Expected: 2
 	- Glyph name: uni1EE9	Contours detected: 3	Expected: 2
-	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2 
-	- And 24 more.
+	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2
+	- Glyph name: uni1EED	Contours detected: 3	Expected: 2 
+	- And 22 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: contour-count]
@@ -1024,7 +1024,7 @@ Use -F or --full-lists to disable shortening of long lists.
 	* three (U+0033): X=55.0,Y=661.0 (should be at cap-height 660?)
 	* three (U+0033): X=531.0,Y=661.0 (should be at cap-height 660?)
 	* four (U+0034): X=246.0,Y=661.0 (should be at cap-height 660?)
-	* four (U+0034): X=526.0,Y=661.0 (should be at cap-height 660?) and 60 more.
+	* four (U+0034): X=526.0,Y=661.0 (should be at cap-height 660?) and 59 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do outlines contain any semi-vertical or semi-horizontal lines? (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_semi_vertical">com.google.fonts/check/outline_semi_vertical</a>)</summary><div>
@@ -1078,17 +1078,17 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 The following glyphs do not have the recommended number of contours:
 
-	- Glyph name: at	Contours detected: 3	Expected: 2
+	- Glyph name: at	Contours detected: 4	Expected: 2
 	- Glyph name: brokenbar	Contours detected: 1	Expected: 2
-	- Glyph name: copyright	Contours detected: 2	Expected: 3
 	- Glyph name: aogonek	Contours detected: 3	Expected: 2
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
 	- Glyph name: Uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uni1EE8	Contours detected: 3	Expected: 2
 	- Glyph name: uni1EE9	Contours detected: 3	Expected: 2
-	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2 
-	- And 24 more.
+	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2
+	- Glyph name: uni1EED	Contours detected: 3	Expected: 2 
+	- And 22 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: contour-count]
@@ -1156,17 +1156,17 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 The following glyphs do not have the recommended number of contours:
 
-	- Glyph name: at	Contours detected: 3	Expected: 2
+	- Glyph name: at	Contours detected: 4	Expected: 2
 	- Glyph name: brokenbar	Contours detected: 1	Expected: 2
-	- Glyph name: copyright	Contours detected: 2	Expected: 3
 	- Glyph name: aogonek	Contours detected: 3	Expected: 2
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
 	- Glyph name: Uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uni1EE8	Contours detected: 3	Expected: 2
 	- Glyph name: uni1EE9	Contours detected: 3	Expected: 2
-	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2 
-	- And 24 more.
+	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2
+	- Glyph name: uni1EED	Contours detected: 3	Expected: 2 
+	- And 22 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: contour-count]
@@ -1226,17 +1226,17 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 The following glyphs do not have the recommended number of contours:
 
-	- Glyph name: at	Contours detected: 3	Expected: 2
+	- Glyph name: at	Contours detected: 4	Expected: 2
 	- Glyph name: brokenbar	Contours detected: 1	Expected: 2
-	- Glyph name: copyright	Contours detected: 2	Expected: 3
 	- Glyph name: aogonek	Contours detected: 3	Expected: 2
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
 	- Glyph name: Uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uni1EE8	Contours detected: 3	Expected: 2
 	- Glyph name: uni1EE9	Contours detected: 3	Expected: 2
-	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2 
-	- And 24 more.
+	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2
+	- Glyph name: uni1EED	Contours detected: 3	Expected: 2 
+	- And 22 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: contour-count]
@@ -1257,7 +1257,7 @@ Use -F or --full-lists to disable shortening of long lists.
 	* bracketleft (U+005B): X=239.0,Y=1.0 (should be at baseline 0?)
 	* bracketright (U+005D): X=0.0,Y=1.0 (should be at baseline 0?)
 	* bracketright (U+005D): X=107.0,Y=1.0 (should be at baseline 0?)
-	* a (U+0061): X=118.5,Y=530.0 (should be at x-height 528?) and 44 more.
+	* a (U+0061): X=118.5,Y=530.0 (should be at x-height 528?) and 45 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do any segments have colinear vectors? (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_colinear_vectors">com.google.fonts/check/outline_colinear_vectors</a>)</summary><div>
@@ -1320,17 +1320,17 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 The following glyphs do not have the recommended number of contours:
 
-	- Glyph name: at	Contours detected: 3	Expected: 2
+	- Glyph name: at	Contours detected: 4	Expected: 2
 	- Glyph name: brokenbar	Contours detected: 1	Expected: 2
-	- Glyph name: copyright	Contours detected: 2	Expected: 3
 	- Glyph name: aogonek	Contours detected: 3	Expected: 2
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
 	- Glyph name: Uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uni1EE8	Contours detected: 3	Expected: 2
 	- Glyph name: uni1EE9	Contours detected: 3	Expected: 2
-	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2 
-	- And 24 more.
+	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2
+	- Glyph name: uni1EED	Contours detected: 3	Expected: 2 
+	- And 22 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: contour-count]
@@ -1380,17 +1380,17 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 The following glyphs do not have the recommended number of contours:
 
-	- Glyph name: at	Contours detected: 3	Expected: 2
+	- Glyph name: at	Contours detected: 4	Expected: 2
 	- Glyph name: brokenbar	Contours detected: 1	Expected: 2
-	- Glyph name: copyright	Contours detected: 2	Expected: 3
 	- Glyph name: aogonek	Contours detected: 3	Expected: 2
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
 	- Glyph name: Uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uni1EE8	Contours detected: 3	Expected: 2
 	- Glyph name: uni1EE9	Contours detected: 3	Expected: 2
-	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2 
-	- And 24 more.
+	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2
+	- Glyph name: uni1EED	Contours detected: 3	Expected: 2 
+	- And 22 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: contour-count]
@@ -1411,7 +1411,7 @@ Use -F or --full-lists to disable shortening of long lists.
 	* five (U+0035): X=71.0,Y=661.0 (should be at cap-height 660?)
 	* five (U+0035): X=505.0,Y=661.0 (should be at cap-height 660?)
 	* seven (U+0037): X=12.0,Y=661.0 (should be at cap-height 660?)
-	* seven (U+0037): X=476.0,Y=661.0 (should be at cap-height 660?) and 51 more.
+	* seven (U+0037): X=476.0,Y=661.0 (should be at cap-height 660?) and 54 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do any segments have colinear vectors? (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_colinear_vectors">com.google.fonts/check/outline_colinear_vectors</a>)</summary><div>
@@ -1469,17 +1469,17 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 The following glyphs do not have the recommended number of contours:
 
-	- Glyph name: at	Contours detected: 3	Expected: 2
+	- Glyph name: at	Contours detected: 4	Expected: 2
 	- Glyph name: brokenbar	Contours detected: 1	Expected: 2
-	- Glyph name: copyright	Contours detected: 2	Expected: 3
 	- Glyph name: aogonek	Contours detected: 3	Expected: 2
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
 	- Glyph name: Uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uni1EE8	Contours detected: 3	Expected: 2
 	- Glyph name: uni1EE9	Contours detected: 3	Expected: 2
-	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2 
-	- And 24 more.
+	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2
+	- Glyph name: uni1EED	Contours detected: 3	Expected: 2 
+	- And 22 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: contour-count]
@@ -1496,11 +1496,11 @@ Use -F or --full-lists to disable shortening of long lists.
 	* ampersand (U+0026): X=424.5,Y=-0.5 (should be at baseline 0?)
 	* four (U+0034): X=164.0,Y=661.0 (should be at cap-height 660?)
 	* four (U+0034): X=309.0,Y=661.0 (should be at cap-height 660?)
+	* at (U+0040): X=287.0,Y=-1.0 (should be at baseline 0?)
+	* at (U+0040): X=287.0,Y=-1.0 (should be at baseline 0?)
 	* Q (U+0051): X=136.5,Y=0.5 (should be at baseline 0?)
 	* a (U+0061): X=112.0,Y=529.0 (should be at x-height 528?)
-	* h (U+0068): X=117.0,Y=526.0 (should be at x-height 528?)
-	* t (U+0074): X=200.0,Y=1.0 (should be at baseline 0?)
-	* copyright (U+00A9): X=282.0,Y=1.0 (should be at baseline 0?) and 81 more.
+	* h (U+0068): X=117.0,Y=526.0 (should be at x-height 528?) and 82 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do any segments have colinear vectors? (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_colinear_vectors">com.google.fonts/check/outline_colinear_vectors</a>)</summary><div>
@@ -1563,17 +1563,17 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 The following glyphs do not have the recommended number of contours:
 
-	- Glyph name: at	Contours detected: 3	Expected: 2
+	- Glyph name: at	Contours detected: 4	Expected: 2
 	- Glyph name: brokenbar	Contours detected: 1	Expected: 2
-	- Glyph name: copyright	Contours detected: 2	Expected: 3
 	- Glyph name: aogonek	Contours detected: 3	Expected: 2
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
 	- Glyph name: Uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uni1EE8	Contours detected: 3	Expected: 2
 	- Glyph name: uni1EE9	Contours detected: 3	Expected: 2
-	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2 
-	- And 24 more.
+	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2
+	- Glyph name: uni1EED	Contours detected: 3	Expected: 2 
+	- And 22 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: contour-count]
@@ -1652,17 +1652,17 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 The following glyphs do not have the recommended number of contours:
 
-	- Glyph name: at	Contours detected: 3	Expected: 2
+	- Glyph name: at	Contours detected: 4	Expected: 2
 	- Glyph name: brokenbar	Contours detected: 1	Expected: 2
-	- Glyph name: copyright	Contours detected: 2	Expected: 3
 	- Glyph name: aogonek	Contours detected: 3	Expected: 2
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
 	- Glyph name: Uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uni1EE8	Contours detected: 3	Expected: 2
 	- Glyph name: uni1EE9	Contours detected: 3	Expected: 2
-	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2 
-	- And 24 more.
+	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2
+	- Glyph name: uni1EED	Contours detected: 3	Expected: 2 
+	- And 22 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: contour-count]
@@ -1739,17 +1739,17 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 The following glyphs do not have the recommended number of contours:
 
-	- Glyph name: at	Contours detected: 3	Expected: 2
+	- Glyph name: at	Contours detected: 4	Expected: 2
 	- Glyph name: brokenbar	Contours detected: 1	Expected: 2
-	- Glyph name: copyright	Contours detected: 2	Expected: 3
 	- Glyph name: aogonek	Contours detected: 3	Expected: 2
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
 	- Glyph name: Uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uni1EE8	Contours detected: 3	Expected: 2
 	- Glyph name: uni1EE9	Contours detected: 3	Expected: 2
-	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2 
-	- And 24 more.
+	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2
+	- Glyph name: uni1EED	Contours detected: 3	Expected: 2 
+	- And 22 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: contour-count]
@@ -1809,17 +1809,17 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 The following glyphs do not have the recommended number of contours:
 
-	- Glyph name: at	Contours detected: 3	Expected: 2
+	- Glyph name: at	Contours detected: 4	Expected: 2
 	- Glyph name: brokenbar	Contours detected: 1	Expected: 2
-	- Glyph name: copyright	Contours detected: 2	Expected: 3
 	- Glyph name: aogonek	Contours detected: 3	Expected: 2
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
 	- Glyph name: Uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uni1EE8	Contours detected: 3	Expected: 2
 	- Glyph name: uni1EE9	Contours detected: 3	Expected: 2
-	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2 
-	- And 24 more.
+	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2
+	- Glyph name: uni1EED	Contours detected: 3	Expected: 2 
+	- And 22 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: contour-count]
@@ -1898,17 +1898,17 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 The following glyphs do not have the recommended number of contours:
 
-	- Glyph name: at	Contours detected: 3	Expected: 2
+	- Glyph name: at	Contours detected: 4	Expected: 2
 	- Glyph name: brokenbar	Contours detected: 1	Expected: 2
-	- Glyph name: copyright	Contours detected: 2	Expected: 3
 	- Glyph name: aogonek	Contours detected: 3	Expected: 2
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
 	- Glyph name: Uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uni1EE8	Contours detected: 3	Expected: 2
 	- Glyph name: uni1EE9	Contours detected: 3	Expected: 2
-	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2 
-	- And 24 more.
+	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2
+	- Glyph name: uni1EED	Contours detected: 3	Expected: 2 
+	- And 22 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: contour-count]
@@ -1981,17 +1981,17 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 The following glyphs do not have the recommended number of contours:
 
-	- Glyph name: at	Contours detected: 3	Expected: 2
+	- Glyph name: at	Contours detected: 4	Expected: 2
 	- Glyph name: brokenbar	Contours detected: 1	Expected: 2
-	- Glyph name: copyright	Contours detected: 2	Expected: 3
 	- Glyph name: aogonek	Contours detected: 3	Expected: 2
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
 	- Glyph name: Uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uni1EE8	Contours detected: 3	Expected: 2
 	- Glyph name: uni1EE9	Contours detected: 3	Expected: 2
-	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2 
-	- And 24 more.
+	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2
+	- Glyph name: uni1EED	Contours detected: 3	Expected: 2 
+	- And 22 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: contour-count]
@@ -2043,17 +2043,17 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 The following glyphs do not have the recommended number of contours:
 
-	- Glyph name: at	Contours detected: 3	Expected: 2
+	- Glyph name: at	Contours detected: 4	Expected: 2
 	- Glyph name: brokenbar	Contours detected: 1	Expected: 2
-	- Glyph name: copyright	Contours detected: 2	Expected: 3
 	- Glyph name: aogonek	Contours detected: 3	Expected: 2
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
 	- Glyph name: Uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uni1EE8	Contours detected: 3	Expected: 2
 	- Glyph name: uni1EE9	Contours detected: 3	Expected: 2
-	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2 
-	- And 24 more.
+	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2
+	- Glyph name: uni1EED	Contours detected: 3	Expected: 2 
+	- And 22 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: contour-count]
@@ -2073,8 +2073,8 @@ Use -F or --full-lists to disable shortening of long lists.
 	* ampersand (U+0026): X=567.0,Y=0.5 (should be at baseline 0?)
 	* four (U+0034): X=317.0,Y=661.0 (should be at cap-height 660?)
 	* four (U+0034): X=442.0,Y=661.0 (should be at cap-height 660?)
-	* k (U+006B): X=372.0,Y=515.0 (should be at x-height 513?)
-	* k (U+006B): X=452.0,Y=515.0 (should be at x-height 513?) and 43 more.
+	* at (U+0040): X=140.0,Y=2.0 (should be at baseline 0?)
+	* k (U+006B): X=372.0,Y=515.0 (should be at x-height 513?) and 44 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do any segments have colinear vectors? (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_colinear_vectors">com.google.fonts/check/outline_colinear_vectors</a>)</summary><div>
@@ -2144,17 +2144,17 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 The following glyphs do not have the recommended number of contours:
 
-	- Glyph name: at	Contours detected: 3	Expected: 2
+	- Glyph name: at	Contours detected: 4	Expected: 2
 	- Glyph name: brokenbar	Contours detected: 1	Expected: 2
-	- Glyph name: copyright	Contours detected: 2	Expected: 3
 	- Glyph name: aogonek	Contours detected: 3	Expected: 2
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
 	- Glyph name: Uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uni1EE8	Contours detected: 3	Expected: 2
 	- Glyph name: uni1EE9	Contours detected: 3	Expected: 2
-	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2 
-	- And 24 more.
+	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2
+	- Glyph name: uni1EED	Contours detected: 3	Expected: 2 
+	- And 22 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: contour-count]
@@ -2230,17 +2230,17 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-colinea
 
 The following glyphs do not have the recommended number of contours:
 
-	- Glyph name: at	Contours detected: 3	Expected: 2
+	- Glyph name: at	Contours detected: 4	Expected: 2
 	- Glyph name: brokenbar	Contours detected: 1	Expected: 2
-	- Glyph name: copyright	Contours detected: 2	Expected: 3
 	- Glyph name: aogonek	Contours detected: 3	Expected: 2
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
 	- Glyph name: Uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uni1EE8	Contours detected: 3	Expected: 2
 	- Glyph name: uni1EE9	Contours detected: 3	Expected: 2
-	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2 
-	- And 24 more.
+	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2
+	- Glyph name: uni1EED	Contours detected: 3	Expected: 2 
+	- And 22 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: contour-count]
@@ -2323,17 +2323,17 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 The following glyphs do not have the recommended number of contours:
 
-	- Glyph name: at	Contours detected: 3	Expected: 2
+	- Glyph name: at	Contours detected: 4	Expected: 2
 	- Glyph name: brokenbar	Contours detected: 1	Expected: 2
-	- Glyph name: copyright	Contours detected: 2	Expected: 3
 	- Glyph name: aogonek	Contours detected: 3	Expected: 2
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
 	- Glyph name: Uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uni1EE8	Contours detected: 3	Expected: 2
 	- Glyph name: uni1EE9	Contours detected: 3	Expected: 2
-	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2 
-	- And 24 more.
+	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2
+	- Glyph name: uni1EED	Contours detected: 3	Expected: 2 
+	- And 22 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: contour-count]
@@ -2385,17 +2385,17 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 The following glyphs do not have the recommended number of contours:
 
-	- Glyph name: at	Contours detected: 3	Expected: 2
+	- Glyph name: at	Contours detected: 4	Expected: 2
 	- Glyph name: brokenbar	Contours detected: 1	Expected: 2
-	- Glyph name: copyright	Contours detected: 2	Expected: 3
 	- Glyph name: aogonek	Contours detected: 3	Expected: 2
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
 	- Glyph name: Uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uni1EE8	Contours detected: 3	Expected: 2
 	- Glyph name: uni1EE9	Contours detected: 3	Expected: 2
-	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2 
-	- And 24 more.
+	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2
+	- Glyph name: uni1EED	Contours detected: 3	Expected: 2 
+	- And 22 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: contour-count]
@@ -2463,17 +2463,17 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 The following glyphs do not have the recommended number of contours:
 
-	- Glyph name: at	Contours detected: 3	Expected: 2
+	- Glyph name: at	Contours detected: 4	Expected: 2
 	- Glyph name: brokenbar	Contours detected: 1	Expected: 2
-	- Glyph name: copyright	Contours detected: 2	Expected: 3
 	- Glyph name: aogonek	Contours detected: 3	Expected: 2
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
 	- Glyph name: Uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uni1EE8	Contours detected: 3	Expected: 2
 	- Glyph name: uni1EE9	Contours detected: 3	Expected: 2
-	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2 
-	- And 24 more.
+	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2
+	- Glyph name: uni1EED	Contours detected: 3	Expected: 2 
+	- And 22 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: contour-count]
@@ -2552,17 +2552,17 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 The following glyphs do not have the recommended number of contours:
 
-	- Glyph name: at	Contours detected: 3	Expected: 2
+	- Glyph name: at	Contours detected: 4	Expected: 2
 	- Glyph name: brokenbar	Contours detected: 1	Expected: 2
-	- Glyph name: copyright	Contours detected: 2	Expected: 3
 	- Glyph name: aogonek	Contours detected: 3	Expected: 2
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
 	- Glyph name: Uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uni1EE8	Contours detected: 3	Expected: 2
 	- Glyph name: uni1EE9	Contours detected: 3	Expected: 2
-	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2 
-	- And 24 more.
+	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2
+	- Glyph name: uni1EED	Contours detected: 3	Expected: 2 
+	- And 22 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: contour-count]
@@ -2645,17 +2645,17 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-semi-ve
 
 The following glyphs do not have the recommended number of contours:
 
-	- Glyph name: at	Contours detected: 3	Expected: 2
+	- Glyph name: at	Contours detected: 4	Expected: 2
 	- Glyph name: brokenbar	Contours detected: 1	Expected: 2
-	- Glyph name: copyright	Contours detected: 2	Expected: 3
 	- Glyph name: aogonek	Contours detected: 3	Expected: 2
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
 	- Glyph name: Uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uni1EE8	Contours detected: 3	Expected: 2
 	- Glyph name: uni1EE9	Contours detected: 3	Expected: 2
-	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2 
-	- And 24 more.
+	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2
+	- Glyph name: uni1EED	Contours detected: 3	Expected: 2 
+	- And 22 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: contour-count]
@@ -2727,17 +2727,17 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 The following glyphs do not have the recommended number of contours:
 
-	- Glyph name: at	Contours detected: 3	Expected: 2
+	- Glyph name: at	Contours detected: 4	Expected: 2
 	- Glyph name: brokenbar	Contours detected: 1	Expected: 2
-	- Glyph name: copyright	Contours detected: 2	Expected: 3
 	- Glyph name: aogonek	Contours detected: 3	Expected: 2
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
 	- Glyph name: Uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uni1EE8	Contours detected: 3	Expected: 2
 	- Glyph name: uni1EE9	Contours detected: 3	Expected: 2
-	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2 
-	- And 24 more.
+	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2
+	- Glyph name: uni1EED	Contours detected: 3	Expected: 2 
+	- And 22 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: contour-count]
@@ -2821,17 +2821,17 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 The following glyphs do not have the recommended number of contours:
 
-	- Glyph name: at	Contours detected: 3	Expected: 2
+	- Glyph name: at	Contours detected: 4	Expected: 2
 	- Glyph name: brokenbar	Contours detected: 1	Expected: 2
-	- Glyph name: copyright	Contours detected: 2	Expected: 3
 	- Glyph name: aogonek	Contours detected: 3	Expected: 2
 	- Glyph name: uogonek	Contours detected: 2	Expected: 1
 	- Glyph name: Uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uhorn	Contours detected: 2	Expected: 1
 	- Glyph name: uni1EE8	Contours detected: 3	Expected: 2
 	- Glyph name: uni1EE9	Contours detected: 3	Expected: 2
-	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2 
-	- And 24 more.
+	- Glyph name: uni1EEC	Contours detected: 3	Expected: 2
+	- Glyph name: uni1EED	Contours detected: 3	Expected: 2 
+	- And 22 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: contour-count]
