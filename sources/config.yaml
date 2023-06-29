@@ -12,8 +12,12 @@ stat:
     values:
     - name: 10pt
       value: 10
-    - name: 24pt
-      value: 24
+    - name: 18pt
+      value: 18
+    - name: 28pt
+      value: 28
+    - name: 36pt
+      value: 36
     - name: 48pt
       value: 48
   - name: Width
