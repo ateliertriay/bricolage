@@ -1,9 +1,6 @@
 {
 .appVersion = "3201";
 .formatVersion = 3;
-DisplayStrings = (
-"Ŋŋ"
-);
 axes = (
 {
 name = "Optical size";
@@ -16998,7 +16995,7 @@ unicode = 209;
 {
 glyphname = Eng;
 kernLeft = KO_H;
-lastChange = "2023-07-05 08:56:31 +0000";
+lastChange = "2023-07-05 08:58:22 +0000";
 layers = (
 {
 anchors = (
@@ -17193,7 +17190,7 @@ nodes = (
 );
 }
 );
-width = 414;
+width = 403;
 },
 {
 anchors = (
@@ -17232,7 +17229,7 @@ nodes = (
 );
 }
 );
-width = 595;
+width = 591;
 },
 {
 anchors = (
@@ -47519,7 +47516,7 @@ unicode = 241;
 glyphname = eng;
 kernLeft = KO_n;
 kernRight = KO_n;
-lastChange = "2023-07-05 08:57:20 +0000";
+lastChange = "2023-07-05 08:58:27 +0000";
 layers = (
 {
 anchors = (
@@ -47593,7 +47590,7 @@ nodes = (
 ref = n;
 }
 );
-width = 508;
+width = 506;
 },
 {
 anchors = (
@@ -47667,7 +47664,7 @@ nodes = (
 ref = n;
 }
 );
-width = 412;
+width = 411;
 },
 {
 anchors = (
@@ -47704,7 +47701,7 @@ nodes = (
 ref = n;
 }
 );
-width = 306;
+width = 302;
 },
 {
 anchors = (
@@ -47741,7 +47738,7 @@ nodes = (
 ref = n;
 }
 );
-width = 492;
+width = 491;
 },
 {
 anchors = (
@@ -47815,7 +47812,7 @@ nodes = (
 ref = n;
 }
 );
-width = 575;
+width = 574;
 }
 );
 metricLeft = "=n";
@@ -87842,9 +87839,8 @@ metricWidth = "=sixperemspace";
 unicode = 8239;
 },
 {
-color = 0;
 glyphname = .notdef;
-lastChange = "2023-06-14 07:43:01 +0000";
+lastChange = "2023-07-05 08:58:39 +0000";
 layers = (
 {
 layerId = "C1A2FA2E-3F34-46D0-916F-7EEB4942386E";
