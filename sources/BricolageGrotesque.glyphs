@@ -1,6 +1,9 @@
 {
 .appVersion = "3201";
 .formatVersion = 3;
+DisplayStrings = (
+"ü̃́"
+);
 axes = (
 {
 name = "Optical size";
@@ -122705,7 +122708,7 @@ R = NoKerning;
 },
 {
 glyphname = tildecomb;
-lastChange = "2023-02-28 09:18:28 +0000";
+lastChange = "2023-07-05 09:14:19 +0000";
 layers = (
 {
 anchors = (
@@ -122935,7 +122938,7 @@ pos = (188,527);
 },
 {
 name = top;
-pos = (188,626);
+pos = (188,696);
 }
 );
 layerId = "C1A2FA2E-3F34-46D0-916F-7EEB4942386E";
