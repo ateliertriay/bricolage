@@ -10,16 +10,20 @@ stat:
   - name: Optical size
     tag: opsz
     values:
-    - name: 10pt
-      value: 10
-    - name: 18pt
-      value: 18
-    - name: 28pt
-      value: 28
+    - name: 12pt
+      value: 12
+    - name: 14pt
+      value: 14
+    - name: 24pt
+      value: 24
     - name: 36pt
       value: 36
     - name: 48pt
       value: 48
+    - name: 72pt
+      value: 72
+    - name: 96pt
+      value: 96
   - name: Width
     tag: wdth
     values:
