@@ -1,9 +1,6 @@
 {
 .appVersion = "3201";
 .formatVersion = 3;
-DisplayStrings = (
-"ü̃́"
-);
 axes = (
 {
 name = "Optical size";
@@ -208632,5 +208629,5 @@ public.postscriptNames = {
 UFOFormat = 3;
 };
 versionMajor = 1;
-versionMinor = 0;
+versionMinor = 1;
 }
