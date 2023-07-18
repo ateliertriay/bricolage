@@ -132,7 +132,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-colinea
 
 
 * ⚠ **WARN** The following glyphs have semi-vertical/semi-horizontal lines:
- * ae (U+00E6): L<<846.0,246.0>--<485.0,243.0>>
+ * ae (U+00E6): L<<847.0,246.0>--<486.0,243.0>>
  * e (U+0065): L<<144.0,305.0>--<428.0,307.0>>
  * e (U+0065): L<<514.0,246.0>--<140.0,243.0>>
  * eacute (U+00E9): L<<144.0,305.0>--<428.0,307.0>>
@@ -198,7 +198,7 @@ Use -F or --full-lists to disable shortening of long lists.
 	* bracketleft (U+005B): X=239.0,Y=1.0 (should be at baseline 0?)
 	* bracketright (U+005D): X=0.0,Y=1.0 (should be at baseline 0?)
 	* bracketright (U+005D): X=107.0,Y=1.0 (should be at baseline 0?)
-	* g (U+0067): X=92.0,Y=-1.0 (should be at baseline 0?) and 49 more.
+	* g (U+0067): X=92.0,Y=-1.0 (should be at baseline 0?) and 48 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do any segments have colinear vectors? (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_colinear_vectors">com.google.fonts/check/outline_colinear_vectors</a>)</summary><div>
@@ -450,7 +450,7 @@ Use -F or --full-lists to disable shortening of long lists.
 	* ampersand (U+0026): X=575.0,Y=-0.5 (should be at baseline 0?)
 	* four (U+0034): X=301.0,Y=661.0 (should be at cap-height 660?)
 	* four (U+0034): X=453.0,Y=661.0 (should be at cap-height 660?)
-	* question (U+003F): X=98.5,Y=660.5 (should be at cap-height 660?)
+	* question (U+003F): X=97.0,Y=660.5 (should be at cap-height 660?)
 	* a (U+0061): X=102.0,Y=1.5 (should be at baseline 0?) and 67 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
@@ -723,8 +723,8 @@ Use -F or --full-lists to disable shortening of long lists.
 
 
 * ⚠ **WARN** The following glyphs have semi-vertical/semi-horizontal lines:
- * ae (U+00E6): L<<490.0,304.0>--<762.0,306.0>>
- * ae (U+00E6): L<<848.0,245.0>--<486.0,243.0>>
+ * ae (U+00E6): L<<490.0,304.0>--<763.0,306.0>>
+ * ae (U+00E6): L<<848.0,245.0>--<487.0,243.0>>
  * e (U+0065): L<<144.0,305.0>--<429.0,307.0>>
  * e (U+0065): L<<515.0,245.0>--<140.0,243.0>>
  * eacute (U+00E9): L<<144.0,305.0>--<429.0,307.0>>
@@ -915,7 +915,7 @@ Use -F or --full-lists to disable shortening of long lists.
 	* four (U+0034): X=495.0,Y=661.0 (should be at cap-height 660?)
 	* seven (U+0037): X=24.0,Y=661.0 (should be at cap-height 660?)
 	* seven (U+0037): X=478.0,Y=661.0 (should be at cap-height 660?)
-	* question (U+003F): X=103.0,Y=660.5 (should be at cap-height 660?) and 35 more.
+	* question (U+003F): X=111.0,Y=661.5 (should be at cap-height 660?) and 35 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do any segments have colinear vectors? (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_colinear_vectors">com.google.fonts/check/outline_colinear_vectors</a>)</summary><div>
@@ -938,7 +938,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-colinea
 
 
 * ⚠ **WARN** The following glyphs have semi-vertical/semi-horizontal lines:
- * ae (U+00E6): L<<521.0,309.0>--<759.0,311.0>>
+ * ae (U+00E6): L<<521.0,309.0>--<760.0,311.0>>
  * ae (U+00E6): L<<874.0,239.0>--<517.0,236.0>>
  * b (U+0062): L<<176.0,148.0>--<177.0,0.0>>
  * e (U+0065): L<<532.0,239.0>--<163.0,236.0>>
@@ -1117,7 +1117,7 @@ Use -F or --full-lists to disable shortening of long lists.
 	* four (U+0034): X=511.0,Y=661.0 (should be at cap-height 660?)
 	* seven (U+0037): X=22.0,Y=661.0 (should be at cap-height 660?)
 	* seven (U+0037): X=490.0,Y=661.0 (should be at cap-height 660?)
-	* j (U+006A): X=70.0,Y=-2.0 (should be at baseline 0?) and 42 more.
+	* j (U+006A): X=70.0,Y=-2.0 (should be at baseline 0?) and 50 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do any segments have colinear vectors? (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_colinear_vectors">com.google.fonts/check/outline_colinear_vectors</a>)</summary><div>
@@ -1280,8 +1280,8 @@ Use -F or --full-lists to disable shortening of long lists.
 
 
 * ⚠ **WARN** The following glyphs have on-curve points which have potentially incorrect y coordinates:
-	* exclam (U+0021): X=77.0,Y=661.0 (should be at cap-height 660?)
-	* exclam (U+0021): X=153.0,Y=661.0 (should be at cap-height 660?)
+	* exclam (U+0021): X=82.0,Y=661.0 (should be at cap-height 660?)
+	* exclam (U+0021): X=158.0,Y=661.0 (should be at cap-height 660?)
 	* dollar (U+0024): X=282.0,Y=-1.0 (should be at baseline 0?)
 	* dollar (U+0024): X=281.0,Y=662.0 (should be at cap-height 660?)
 	* dollar (U+0024): X=324.0,Y=661.0 (should be at cap-height 660?)
@@ -1369,8 +1369,8 @@ Use -F or --full-lists to disable shortening of long lists.
 
 
 * ⚠ **WARN** The following glyphs have on-curve points which have potentially incorrect y coordinates:
-	* exclam (U+0021): X=78.0,Y=661.0 (should be at cap-height 660?)
-	* exclam (U+0021): X=154.0,Y=661.0 (should be at cap-height 660?)
+	* exclam (U+0021): X=83.0,Y=661.0 (should be at cap-height 660?)
+	* exclam (U+0021): X=159.0,Y=661.0 (should be at cap-height 660?)
 	* dollar (U+0024): X=282.0,Y=-1.0 (should be at baseline 0?)
 	* dollar (U+0024): X=282.0,Y=662.0 (should be at cap-height 660?)
 	* dollar (U+0024): X=324.0,Y=661.0 (should be at cap-height 660?)
@@ -1666,8 +1666,8 @@ Use -F or --full-lists to disable shortening of long lists.
 
 
 * ⚠ **WARN** The following glyphs have on-curve points which have potentially incorrect y coordinates:
-	* exclam (U+0021): X=69.0,Y=661.0 (should be at cap-height 660?)
-	* exclam (U+0021): X=198.0,Y=661.0 (should be at cap-height 660?)
+	* exclam (U+0021): X=72.0,Y=661.0 (should be at cap-height 660?)
+	* exclam (U+0021): X=200.0,Y=661.0 (should be at cap-height 660?)
 	* dollar (U+0024): X=274.0,Y=1.0 (should be at baseline 0?)
 	* three (U+0033): X=59.0,Y=661.0 (should be at cap-height 660?)
 	* three (U+0033): X=506.0,Y=661.0 (should be at cap-height 660?)
@@ -1675,7 +1675,7 @@ Use -F or --full-lists to disable shortening of long lists.
 	* four (U+0034): X=481.0,Y=661.0 (should be at cap-height 660?)
 	* seven (U+0037): X=26.0,Y=661.0 (should be at cap-height 660?)
 	* seven (U+0037): X=468.0,Y=661.0 (should be at cap-height 660?)
-	* q (U+0071): X=449.0,Y=519.0 (should be at x-height 520?) and 44 more.
+	* question (U+003F): X=113.0,Y=659.5 (should be at cap-height 660?) and 44 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do any segments have colinear vectors? (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_colinear_vectors">com.google.fonts/check/outline_colinear_vectors</a>)</summary><div>
@@ -1760,8 +1760,8 @@ Use -F or --full-lists to disable shortening of long lists.
 * ⚠ **WARN** The following glyphs have semi-vertical/semi-horizontal lines:
  * M (U+004D): L<<158.0,586.0>--<163.0,0.0>>
  * Uogonek (U+0172): L<<161.0,660.0>--<160.0,251.0>>
- * ae (U+00E6): L<<474.0,302.0>--<763.0,304.0>>
- * ae (U+00E6): L<<834.0,249.0>--<471.0,246.0>>
+ * ae (U+00E6): L<<475.0,302.0>--<764.0,304.0>>
+ * ae (U+00E6): L<<835.0,249.0>--<471.0,246.0>>
  * e (U+0065): L<<505.0,249.0>--<129.0,246.0>>
  * eacute (U+00E9): L<<505.0,249.0>--<129.0,246.0>>
  * ecaron (U+011B): L<<505.0,249.0>--<129.0,246.0>>
@@ -2078,7 +2078,7 @@ Use -F or --full-lists to disable shortening of long lists.
 	* ampersand (U+0026): X=562.5,Y=2.0 (should be at baseline 0?)
 	* four (U+0034): X=334.0,Y=661.0 (should be at cap-height 660?)
 	* four (U+0034): X=431.0,Y=661.0 (should be at cap-height 660?)
-	* question (U+003F): X=100.5,Y=658.5 (should be at cap-height 660?)
+	* question (U+003F): X=98.5,Y=658.5 (should be at cap-height 660?)
 	* k (U+006B): X=379.0,Y=512.0 (should be at x-height 510?)
 	* k (U+006B): X=438.0,Y=512.0 (should be at x-height 510?) and 46 more.
 
@@ -2169,7 +2169,7 @@ Use -F or --full-lists to disable shortening of long lists.
 	* four (U+0034): X=496.0,Y=661.0 (should be at cap-height 660?)
 	* seven (U+0037): X=24.0,Y=661.0 (should be at cap-height 660?)
 	* seven (U+0037): X=479.0,Y=661.0 (should be at cap-height 660?)
-	* question (U+003F): X=103.5,Y=660.5 (should be at cap-height 660?) and 33 more.
+	* question (U+003F): X=111.5,Y=661.5 (should be at cap-height 660?) and 33 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do any segments have colinear vectors? (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_colinear_vectors">com.google.fonts/check/outline_colinear_vectors</a>)</summary><div>
@@ -2190,8 +2190,8 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 
 * ⚠ **WARN** The following glyphs have semi-vertical/semi-horizontal lines:
- * ae (U+00E6): L<<522.0,309.0>--<761.0,311.0>>
- * ae (U+00E6): L<<875.0,239.0>--<517.0,236.0>>
+ * ae (U+00E6): L<<522.0,309.0>--<762.0,311.0>>
+ * ae (U+00E6): L<<876.0,239.0>--<518.0,236.0>>
  * b (U+0062): L<<177.0,147.0>--<178.0,0.0>>
  * e (U+0065): L<<168.0,309.0>--<417.0,311.0>>
  * e (U+0065): L<<533.0,239.0>--<163.0,236.0>>
@@ -2264,7 +2264,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-colinea
 
 * ⚠ **WARN** The following glyphs have semi-vertical/semi-horizontal lines:
  * M (U+004D): L<<158.0,586.0>--<162.0,0.0>>
- * ae (U+00E6): L<<832.0,249.0>--<470.0,246.0>>
+ * ae (U+00E6): L<<833.0,249.0>--<471.0,246.0>>
  * e (U+0065): L<<132.0,303.0>--<434.0,305.0>>
  * e (U+0065): L<<505.0,249.0>--<128.0,246.0>>
  * eacute (U+00E9): L<<132.0,303.0>--<434.0,305.0>>
@@ -2639,9 +2639,9 @@ Use -F or --full-lists to disable shortening of long lists.
 	* four (U+0034): X=480.0,Y=661.0 (should be at cap-height 660?)
 	* seven (U+0037): X=26.0,Y=661.0 (should be at cap-height 660?)
 	* seven (U+0037): X=467.0,Y=661.0 (should be at cap-height 660?)
+	* question (U+003F): X=112.0,Y=659.5 (should be at cap-height 660?)
 	* at (U+0040): X=476.0,Y=659.0 (should be at cap-height 660?)
-	* q (U+0071): X=448.0,Y=519.0 (should be at x-height 520?)
-	* q (U+0071): X=543.0,Y=519.0 (should be at x-height 520?) and 52 more.
+	* q (U+0071): X=448.0,Y=519.0 (should be at x-height 520?) and 52 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do any segments have colinear vectors? (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_colinear_vectors">com.google.fonts/check/outline_colinear_vectors</a>)</summary><div>
@@ -2821,7 +2821,7 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-colinea
 
 
 * ⚠ **WARN** The following glyphs have semi-vertical/semi-horizontal lines:
- * ae (U+00E6): L<<887.0,236.0>--<532.0,233.0>>
+ * ae (U+00E6): L<<888.0,236.0>--<532.0,233.0>>
  * b (U+0062): L<<186.0,152.0>--<185.0,0.0>>
  * e (U+0065): L<<542.0,236.0>--<175.0,233.0>>
  * eacute (U+00E9): L<<542.0,236.0>--<175.0,233.0>>
