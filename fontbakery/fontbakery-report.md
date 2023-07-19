@@ -72,6 +72,7 @@ Use -F or --full-lists to disable shortening of long lists.
 
 
 * ⚠ **WARN** The following glyphs have semi-vertical/semi-horizontal lines:
+ * Eng (U+014A): L<<522.0,660.0>--<521.0,0.0>>
  * lira (U+20A4): L<<49.0,316.0>--<189.0,315.0>>
  * two (U+0032): L<<168.0,111.0>--<414.0,112.0>> and uni00B5 (U+00B5): L<<330.0,0.0>--<329.0,152.0>> [code: found-semi-vertical]
 </div></details><br></div></details><details><summary><b>[7] BricolageGrotesque-Regular.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Space and non-breaking space have the same width? (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/hmtx.html#com.google.fonts/check/whitespace_widths">com.google.fonts/check/whitespace_widths</a>)</summary><div>
@@ -630,7 +631,7 @@ Use -F or --full-lists to disable shortening of long lists.
 	* dollar (U+0024): X=309.0,Y=658.0 (should be at cap-height 660?)
 	* dollar (U+0024): X=308.0,Y=1.0 (should be at baseline 0?)
 	* percent (U+0025): X=771.5,Y=1.5 (should be at baseline 0?)
-	* ampersand (U+0026): X=568.5,Y=0.5 (should be at baseline 0?)
+	* ampersand (U+0026): X=568.5,Y=1.0 (should be at baseline 0?)
 	* four (U+0034): X=317.0,Y=661.0 (should be at cap-height 660?)
 	* four (U+0034): X=442.0,Y=661.0 (should be at cap-height 660?)
 	* at (U+0040): X=140.0,Y=2.0 (should be at baseline 0?)
@@ -657,7 +658,6 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-colinea
 
 
 * ⚠ **WARN** The following glyphs have semi-vertical/semi-horizontal lines:
- * Uogonek (U+0172): L<<127.0,660.0>--<126.0,258.0>>
  * b (U+0062): L<<48.0,0.0>--<49.0,249.0>>
  * b (U+0062): L<<49.0,249.0>--<48.0,675.0>>
  * d (U+0064): L<<490.0,675.0>--<488.0,238.0>>
@@ -666,7 +666,8 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-colinea
  * dong (U+20AB): L<<489.0,564.0>--<488.0,238.0>>
  * eng (U+014B): L<<49.0,232.0>--<48.0,513.0>>
  * h (U+0068): L<<49.0,212.0>--<48.0,675.0>>
- * hbar (U+0127): L<<54.0,212.0>--<53.0,564.0>> and 41 more.
+ * hbar (U+0127): L<<54.0,212.0>--<53.0,564.0>>
+ * lira (U+20A4): L<<224.0,415.0>--<426.0,416.0>> and 39 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-semi-vertical]
 </div></details><br></div></details><details><summary><b>[8] BricolageGrotesque12pt-Regular.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Space and non-breaking space have the same width? (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/hmtx.html#com.google.fonts/check/whitespace_widths">com.google.fonts/check/whitespace_widths</a>)</summary><div>
@@ -1042,13 +1043,13 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-colinea
  * b (U+0062): L<<38.0,0.0>--<39.0,199.0>>
  * b (U+0062): L<<39.0,199.0>--<38.0,695.0>>
  * eng (U+014B): L<<39.0,286.0>--<38.0,525.0>>
- * four (U+0034): L<<16.0,125.0>--<15.0,263.0>>
  * h (U+0068): L<<39.0,266.0>--<38.0,695.0>>
  * lira (U+20A4): L<<293.0,405.0>--<473.0,406.0>>
  * lira (U+20A4): L<<346.0,325.0>--<473.0,326.0>>
  * lira (U+20A4): L<<473.0,359.0>--<324.0,358.0>>
  * m (U+006D): L<<39.0,277.0>--<38.0,525.0>>
- * n (U+006E): L<<39.0,286.0>--<38.0,525.0>> and 14 more.
+ * n (U+006E): L<<39.0,286.0>--<38.0,525.0>>
+ * nacute (U+0144): L<<39.0,286.0>--<38.0,525.0>> and 13 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-semi-vertical]
 </div></details><br></div></details><details><summary><b>[11] BricolageGrotesque12pt-Bold.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check name table: FONT_FAMILY_NAME entries. (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/familyname">com.google.fonts/check/name/familyname</a>)</summary><div>
@@ -1112,7 +1113,7 @@ Use -F or --full-lists to disable shortening of long lists.
 	* dollar (U+0024): X=359.0,Y=659.0 (should be at cap-height 660?)
 	* dollar (U+0024): X=358.0,Y=1.0 (should be at baseline 0?)
 	* three (U+0033): X=56.0,Y=661.0 (should be at cap-height 660?)
-	* three (U+0033): X=522.0,Y=661.0 (should be at cap-height 660?)
+	* three (U+0033): X=523.0,Y=661.0 (should be at cap-height 660?)
 	* four (U+0034): X=261.0,Y=661.0 (should be at cap-height 660?)
 	* four (U+0034): X=511.0,Y=661.0 (should be at cap-height 660?)
 	* seven (U+0037): X=22.0,Y=661.0 (should be at cap-height 660?)
@@ -1447,9 +1448,9 @@ Use -F or --full-lists to disable shortening of long lists.
 
 
 * ⚠ **WARN** The following glyphs have colinear vectors:
-	* G (U+0047): L<<309.0,325.0>--<309.0,243.0>> -> L<<309.0,243.0>--<311.0,0.0>>
-	* Gbreve (U+011E): L<<309.0,325.0>--<309.0,243.0>> -> L<<309.0,243.0>--<311.0,0.0>>
-	* Gdotaccent (U+0120): L<<309.0,325.0>--<309.0,243.0>> -> L<<309.0,243.0>--<311.0,0.0>>
+	* G (U+0047): L<<309.0,325.0>--<309.0,243.0>> -> L<<309.0,243.0>--<310.0,0.0>>
+	* Gbreve (U+011E): L<<309.0,325.0>--<309.0,243.0>> -> L<<309.0,243.0>--<310.0,0.0>>
+	* Gdotaccent (U+0120): L<<309.0,325.0>--<309.0,243.0>> -> L<<309.0,243.0>--<310.0,0.0>>
 	* b (U+0062): L<<32.0,0.0>--<36.0,255.0>> -> L<<36.0,255.0>--<36.0,680.0>>
 	* d (U+0064): L<<284.0,680.0>--<282.0,252.0>> -> L<<282.0,252.0>--<284.0,0.0>>
 	* dcaron (U+010F): L<<284.0,680.0>--<282.0,252.0>> -> L<<282.0,252.0>--<284.0,0.0>>
@@ -1464,21 +1465,21 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-colinea
 
 * ⚠ **WARN** The following glyphs have jaggy segments:
 	* trademark (U+2122): L<<251.0,656.0>--<285.0,397.0>>/L<<285.0,397.0>--<313.0,656.0>> = 13.648864603177843
-	* trademark (U+2122): L<<254.0,328.0>--<220.0,594.0>>/L<<220.0,594.0>--<220.0,328.0>> = 7.284023654416849 and trademark (U+2122): L<<346.0,328.0>--<346.0,594.0>>/L<<346.0,594.0>--<311.0,328.0>> = 7.495857639729836 [code: found-jaggy-segments]
+	* trademark (U+2122): L<<254.0,328.0>--<220.0,594.0>>/L<<220.0,594.0>--<220.0,328.0>> = 7.284023654416849 and trademark (U+2122): L<<345.0,328.0>--<345.0,594.0>>/L<<345.0,594.0>--<311.0,328.0>> = 7.284023654416849 [code: found-jaggy-segments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do outlines contain any semi-vertical or semi-horizontal lines? (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_semi_vertical">com.google.fonts/check/outline_semi_vertical</a>)</summary><div>
 
 
 * ⚠ **WARN** The following glyphs have semi-vertical/semi-horizontal lines:
- * G (U+0047): L<<309.0,243.0>--<311.0,0.0>>
- * Gbreve (U+011E): L<<309.0,243.0>--<311.0,0.0>>
- * Gdotaccent (U+0120): L<<309.0,243.0>--<311.0,0.0>>
+ * G (U+0047): L<<309.0,243.0>--<310.0,0.0>>
+ * Gbreve (U+011E): L<<309.0,243.0>--<310.0,0.0>>
+ * Gdotaccent (U+0120): L<<309.0,243.0>--<310.0,0.0>>
  * d (U+0064): L<<282.0,252.0>--<284.0,0.0>>
  * d (U+0064): L<<284.0,680.0>--<282.0,252.0>>
  * dcaron (U+010F): L<<282.0,252.0>--<284.0,0.0>>
  * dcaron (U+010F): L<<284.0,680.0>--<282.0,252.0>>
  * dcroat (U+0111): L<<282.0,252.0>--<284.0,0.0>>
  * dcroat (U+0111): L<<283.0,568.0>--<282.0,252.0>>
- * dong (U+20AB): L<<282.0,252.0>--<284.0,0.0>> and 13 more.
+ * dong (U+20AB): L<<282.0,252.0>--<284.0,0.0>> and 14 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-semi-vertical]
 </div></details><br></div></details><details><summary><b>[7] BricolageGrotesque-ExtraBold.ttf</b></summary><div><details><summary>⚠ <b>WARN:</b> Checking OS/2 achVendID. (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/googlefonts.html#com.google.fonts/check/vendor_id">com.google.fonts/check/vendor_id</a>)</summary><div>
@@ -1599,12 +1600,12 @@ Use -F or --full-lists to disable shortening of long lists.
 
 
 * ⚠ **WARN** The following glyphs have colinear vectors:
-	* G (U+0047): L<<412.0,313.0>--<412.0,232.0>> -> L<<412.0,232.0>--<412.0,0.0>>
-	* Gbreve (U+011E): L<<412.0,313.0>--<412.0,232.0>> -> L<<412.0,232.0>--<412.0,0.0>>
-	* Gdotaccent (U+0120): L<<412.0,313.0>--<412.0,232.0>> -> L<<412.0,232.0>--<412.0,0.0>>
+	* G (U+0047): L<<411.0,313.0>--<411.0,232.0>> -> L<<411.0,232.0>--<412.0,0.0>>
+	* Gbreve (U+011E): L<<411.0,313.0>--<411.0,232.0>> -> L<<411.0,232.0>--<412.0,0.0>>
+	* Gdotaccent (U+0120): L<<411.0,313.0>--<411.0,232.0>> -> L<<411.0,232.0>--<412.0,0.0>>
 	* OE (U+0152): L<<341.0,660.0>--<410.0,660.0>> -> L<<410.0,660.0>--<410.0,660.0>>
 	* OE (U+0152): L<<410.0,660.0>--<410.0,660.0>> -> L<<410.0,660.0>--<618.0,660.0>>
-	* uni0122 (U+0122): L<<412.0,313.0>--<412.0,232.0>> -> L<<412.0,232.0>--<412.0,0.0>> and uni20B2 (U+20B2): L<<382.0,311.0>--<382.0,232.0>> -> L<<382.0,232.0>--<383.0,5.0>> [code: found-colinear-vectors]
+	* uni0122 (U+0122): L<<411.0,313.0>--<411.0,232.0>> -> L<<411.0,232.0>--<412.0,0.0>> and uni20B2 (U+20B2): L<<382.0,311.0>--<382.0,232.0>> -> L<<382.0,232.0>--<383.0,5.0>> [code: found-colinear-vectors]
 </div></details><details><summary>⚠ <b>WARN:</b> Do outlines contain any jaggy segments? (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_jaggy_segments">com.google.fonts/check/outline_jaggy_segments</a>)</summary><div>
 
 
@@ -1614,8 +1615,12 @@ Use -F or --full-lists to disable shortening of long lists.
 
 
 * ⚠ **WARN** The following glyphs have semi-vertical/semi-horizontal lines:
- * Uogonek (U+0172): L<<144.0,660.0>--<143.0,177.0>>
- * uni1EEA (U+1EEA): L<<144.0,660.0>--<143.0,177.0>>
+ * G (U+0047): L<<411.0,232.0>--<412.0,0.0>>
+ * Gbreve (U+011E): L<<411.0,232.0>--<412.0,0.0>>
+ * Gdotaccent (U+0120): L<<411.0,232.0>--<412.0,0.0>>
+ * eng (U+014B): L<<376.0,357.0>--<375.0,0.0>>
+ * estimated (U+212E): L<<185.0,311.0>--<184.0,143.0>>
+ * uni0122 (U+0122): L<<411.0,232.0>--<412.0,0.0>>
  * uni20B2 (U+20B2): L<<382.0,232.0>--<383.0,5.0>> and uni20BC (U+20BC): L<<282.0,486.0>--<283.0,0.0>> [code: found-semi-vertical]
 </div></details><br></div></details><details><summary><b>[10] BricolageGrotesque12pt-Medium.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Space and non-breaking space have the same width? (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/hmtx.html#com.google.fonts/check/whitespace_widths">com.google.fonts/check/whitespace_widths</a>)</summary><div>
 
@@ -1759,7 +1764,6 @@ Use -F or --full-lists to disable shortening of long lists.
 
 * ⚠ **WARN** The following glyphs have semi-vertical/semi-horizontal lines:
  * M (U+004D): L<<158.0,586.0>--<163.0,0.0>>
- * Uogonek (U+0172): L<<161.0,660.0>--<160.0,251.0>>
  * ae (U+00E6): L<<475.0,302.0>--<764.0,304.0>>
  * ae (U+00E6): L<<835.0,249.0>--<471.0,246.0>>
  * e (U+0065): L<<505.0,249.0>--<129.0,246.0>>
@@ -1767,7 +1771,8 @@ Use -F or --full-lists to disable shortening of long lists.
  * ecaron (U+011B): L<<505.0,249.0>--<129.0,246.0>>
  * ecircumflex (U+00EA): L<<505.0,249.0>--<129.0,246.0>>
  * edieresis (U+00EB): L<<505.0,249.0>--<129.0,246.0>>
- * edotaccent (U+0117): L<<505.0,249.0>--<129.0,246.0>> and 17 more.
+ * edotaccent (U+0117): L<<505.0,249.0>--<129.0,246.0>>
+ * egrave (U+00E8): L<<505.0,249.0>--<129.0,246.0>> and 14 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-semi-vertical]
 </div></details><br></div></details><details><summary><b>[7] BricolageGrotesque12pt-ExtraBold.ttf</b></summary><div><details><summary>⚠ <b>WARN:</b> Checking OS/2 achVendID. (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/googlefonts.html#com.google.fonts/check/vendor_id">com.google.fonts/check/vendor_id</a>)</summary><div>
@@ -2475,10 +2480,10 @@ Use -F or --full-lists to disable shortening of long lists.
 	* r (U+0072): X=277.0,Y=530.0 (should be at x-height 528?)
 	* t (U+0074): X=57.5,Y=529.0 (should be at x-height 528?)
 	* section (U+00A7): X=363.0,Y=-1.0 (should be at baseline 0?)
-	* germandbls (U+00DF): X=218.0,Y=-0.5 (should be at baseline 0?)
+	* germandbls (U+00DF): X=218.0,Y=-1.0 (should be at baseline 0?)
 	* atilde (U+00E3): X=246.5,Y=658.5 (should be at cap-height 660?)
 	* eth (U+00F0): X=249.0,Y=-2.0 (should be at baseline 0?)
-	* ntilde (U+00F1): X=249.5,Y=658.5 (should be at cap-height 660?) and 37 more.
+	* ntilde (U+00F1): X=249.5,Y=658.5 (should be at cap-height 660?) and 36 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do any segments have colinear vectors? (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_colinear_vectors">com.google.fonts/check/outline_colinear_vectors</a>)</summary><div>
@@ -2512,11 +2517,11 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-colinea
  * Gbreve (U+011E): L<<392.0,229.0>--<393.0,0.0>>
  * Gdotaccent (U+0120): L<<303.0,0.0>--<304.0,192.0>>
  * Gdotaccent (U+0120): L<<392.0,229.0>--<393.0,0.0>>
- * q (U+0071): L<<374.0,276.0>--<375.0,-130.0>>
- * q (U+0071): L<<375.0,528.0>--<374.0,276.0>>
+ * Uogonek (U+0172): L<<390.0,660.0>--<389.0,209.0>>
  * uni00B5 (U+00B5): L<<377.0,236.0>--<378.0,0.0>>
  * uni0122 (U+0122): L<<303.0,0.0>--<304.0,192.0>>
- * uni0122 (U+0122): L<<392.0,229.0>--<393.0,0.0>> and uni20B2 (U+20B2): L<<285.0,5.0>--<286.0,193.0>> [code: found-semi-vertical]
+ * uni0122 (U+0122): L<<392.0,229.0>--<393.0,0.0>>
+ * uni1EEA (U+1EEA): L<<390.0,625.0>--<389.0,209.0>> and uni20B2 (U+20B2): L<<285.0,5.0>--<286.0,193.0>> [code: found-semi-vertical]
 </div></details><br></div></details><details><summary><b>[8] BricolageGrotesque12ptCondensed-SemiBold.ttf</b></summary><div><details><summary>⚠ <b>WARN:</b> Checking OS/2 achVendID. (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/googlefonts.html#com.google.fonts/check/vendor_id">com.google.fonts/check/vendor_id</a>)</summary><div>
 
 
